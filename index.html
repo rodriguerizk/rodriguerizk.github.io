@@ -9,51 +9,107 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic">
     <h1>Prof. [Your Name], Ph.D.</h1>
-    <h2>Professor of Computer Science and Engineering</h2>
-    <p>[Your University Name]</p>
+    <h2>Professor of Computer Science & Engineering</h2>
+    <p>[University Name]</p>
     <div class="links">
-      <a href="https://scholar.google.com/" target="_blank">Google Scholar</a> |
-      <a href="https://orcid.org/" target="_blank">ORCID</a> |
-      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
-      <a href="https://researchgate.net/" target="_blank">ResearchGate</a> |
+      <a href="#" target="_blank">Google Scholar</a> |
+      <a href="#" target="_blank">ORCID</a> |
+      <a href="#" target="_blank">LinkedIn</a> |
       <a href="mailto:your.email@university.edu">Email</a>
     </div>
   </header>
 
   <main>
-    <section>
+
+    <!-- Research Interests -->
+    <section id="research">
       <h3>🧠 Research Interests</h3>
       <ul>
         <li>Artificial Intelligence (AI)</li>
-        <li>Deep Learning & Neural Network Architectures</li>
+        <li>Deep Learning & Neural Networks</li>
         <li>Reinforcement Learning & Multi-Agent Systems</li>
-        <li>Quantum Computing and Quantum Machine Learning</li>
-        <li>Computational Neuroscience and Cognitive Modeling</li>
+        <li>Quantum Computing & Quantum Machine Learning</li>
       </ul>
     </section>
 
-    <section>
-      <h3>🔬 Current Research Projects</h3>
-      <ul>
-        <li><b>Quantum-Enhanced Reinforcement Learning</b> — exploring quantum policy representations for faster learning.</li>
-        <li><b>Trustworthy and Explainable AI Systems</b> — interpretable deep learning for healthcare and robotics.</li>
-        <li><b>Neural Network Optimization and Generalization</b> — new architectures and regularization methods for robust AI.</li>
-      </ul>
+    <!-- Featured Projects -->
+    <section id="projects">
+      <h3>🚀 Featured Projects</h3>
+      <div class="project-grid">
+        <div class="project-card ai">
+          <h4>Neural Architecture Search</h4>
+          <span class="project-tag">AI</span>
+          <p>Automated discovery of neural network architectures for image classification tasks.</p>
+          <a href="#" class="btn" target="_blank">Learn More</a>
+        </div>
+        <div class="project-card rl">
+          <h4>Multi-Agent Reinforcement Learning</h4>
+          <span class="project-tag">RL</span>
+          <p>Developed scalable algorithms for coordinating multiple agents in complex environments.</p>
+          <a href="#" class="btn" target="_blank">Learn More</a>
+        </div>
+        <div class="project-card quantum">
+          <h4>Quantum Optimization Algorithms</h4>
+          <span class="project-tag">Quantum</span>
+          <p>Exploring quantum algorithms to solve combinatorial optimization problems faster than classical methods.</p>
+          <a href="#" class="btn" target="_blank">Learn More</a>
+        </div>
+      </div>
     </section>
 
-    <section>
+    <!-- Publications -->
+    <section id="publications">
       <h3>📚 Selected Publications</h3>
-      <ul>
-        <li><b>[Paper Title]</b>, <i>Journal/Conference</i>, Year. <a href="#">[DOI]</a></li>
-        <li><b>[Paper Title]</b>, <i>NeurIPS</i>, Year. <a href="#">[PDF]</a></li>
-        <li><b>[Paper Title]</b>, <i>Quantum Information and Computation</i>, Year. <a href="#">[DOI]</a></li>
+
+      <!-- Search bar -->
+      <input type="text" id="pub-search" placeholder="Search publications...">
+
+      <!-- Filter buttons -->
+      <div class="pub-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="rl">Reinforcement Learning</button>
+        <button class="filter-btn" data-filter="quantum">Quantum Computing</button>
+      </div>
+
+      <ul class="pub-list">
+        <li class="pub-item ai" data-year="2025">
+          <span class="pub-year">2025</span>
+          <b>Sample AI Paper 1</b>, <i>NeurIPS</i>
+          <span class="pub-tags">AI</span>
+          <a href="papers/sample-paper.pdf" class="btn" target="_blank">PDF</a>
+          <p class="pub-abstract">This paper explores cutting-edge neural network architectures for image recognition.</p>
+        </li>
+        <li class="pub-item rl" data-year="2024">
+          <span class="pub-year">2024</span>
+          <b>Reinforcement Learning Paper</b>, <i>ICML</i>
+          <span class="pub-tags">RL</span>
+          <a href="#" class="btn">DOI</a>
+          <p class="pub-abstract">Introduces a novel RL algorithm for multi-agent systems.</p>
+        </li>
+        <li class="pub-item quantum" data-year="2023">
+          <span class="pub-year">2023</span>
+          <b>Quantum Computing Paper</b>, <i>Quantum</i>
+          <span class="pub-tags">Quantum</span>
+          <a href="#" class="btn">PDF</a>
+          <p class="pub-abstract">Demonstrates a quantum algorithm for solving optimization problems faster than classical methods.</p>
+        </li>
+        <li class="pub-item ai" data-year="2022">
+          <span class="pub-year">2022</span>
+          <b>AI Paper 2</b>, <i>CVPR</i>
+          <span class="pub-tags">AI</span>
+          <a href="#" class="btn">PDF</a>
+          <p class="pub-abstract">Focuses on self-supervised learning in computer vision tasks.</p>
+        </li>
       </ul>
     </section>
 
-    <section>
+    <!-- Teaching -->
+    <section id="teaching">
       <h3>🎓 Teaching</h3>
       <ul>
         <li><b>CSE 540:</b> Deep Learning Foundations</li>
@@ -61,12 +117,27 @@
         <li><b>CSE 720:</b> Reinforcement Learning and Control</li>
       </ul>
     </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h3>✉️ Contact</h3>
+      <p>Email: <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
+      <p>Connect: 
+        <a href="#" target="_blank">LinkedIn</a> | 
+        <a href="#" target="_blank">Google Scholar</a>
+      </p>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Prof. [Your Name] — Department of Computer Science and Engineering</p>
+    <p>© 2025 Prof. [Your Name]. All rights reserved.</p>
+    <p>No part of this website, including text, images, or code, may be copied, reproduced, or redistributed without permission.</p>
     <p><i>“The limits of machine intelligence are the limits of our imagination.”</i></p>
   </footer>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
 </body>
 </html>
-
