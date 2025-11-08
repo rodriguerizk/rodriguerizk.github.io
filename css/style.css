@@ -1,10 +1,16 @@
-/* --- Compact header layout --- */
+/* --- Page container for alignment --- */
+.container {
+  max-width: 900px; /* matches section box width */
+  margin: 0 auto;   /* center on page */
+  padding: 1em 2em; /* spacing around content */
+}
+
+/* --- Header layout --- */
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 1.5em;
-  margin: 1.5em 0 1em 0;
+  margin-bottom: 2em;
 }
 
 .headshot {
@@ -13,10 +19,11 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  flex-shrink: 0;
 }
 
 .header-text h1 {
-  font-size: 1.8em;  /* smaller, cleaner */
+  font-size: 1.8em;  
   margin: 0;
   line-height: 1.2;
   background: linear-gradient(90deg, #004080 0%, #007acc 50%, #00bfff 100%);
@@ -30,7 +37,7 @@
   color: #333;
 }
 
-/* Make it responsive for mobile */
+/* --- Responsive: stack on mobile --- */
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
@@ -46,6 +53,17 @@
   .header-text h1 {
     font-size: 1.5em;
   }
+}
+
+/* --- Section boxes --- */
+.section-box {
+  max-width: 900px;   /* match header container width */
+  margin: 0 auto 1.8em auto;
+  padding: 1.5em 1.8em;
+  border-left: 6px solid #007acc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background-color: #fefefe;
 }
 
 
