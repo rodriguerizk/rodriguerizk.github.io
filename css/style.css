@@ -319,3 +319,21 @@ body.dark-mode .pub-abstract {
     max-width: 100%;
   }
 }
+
+  /* --- Section box styling --- */
+  .section-box {
+    background-color: #fff;
+    border-left: 6px solid #007acc;
+    border-radius: 6px;
+    padding: 1.5em 1.8em;
+    margin-bottom: 1.8em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  /* --- Optional alternating colors for variety --- */
+  .alt1 { border-left-color: #007acc; background-color: #fefefe; }
+  .alt2 { border-left-color: #009688; background-color: #fcfcfc; }
+  .alt3 { border-left-color: #9c27b0; background-color: #fdfbff; }
+  .alt4 { border-left-color: #ff9800; background-color: #fffaf5; }
+  .alt5 { border-left-color: #3f51b5; background-color: #fafaff; }
+  .alt6 { border-left-color: #4caf50; background-color: #f8fff8; }
