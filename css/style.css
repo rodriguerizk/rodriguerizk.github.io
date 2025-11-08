@@ -337,3 +337,13 @@ body.dark-mode .pub-abstract {
   .alt4 { border-left-color: #ff9800; background-color: #fffaf5; }
   .alt5 { border-left-color: #3f51b5; background-color: #fafaff; }
   .alt6 { border-left-color: #4caf50; background-color: #f8fff8; }
+
+
+/* --- Gradient text effect for <strong> --- */
+strong {
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(197, 48, 48) 50%, rgb(229, 62, 62) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Safari and modern browsers */
+  font-weight: 700;
+}
