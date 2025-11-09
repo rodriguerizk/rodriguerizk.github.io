@@ -543,3 +543,283 @@ body.dark section:hover {
 .footer p {
   margin: 5px 0;  /* keeps spacing tight and neat */
 }
+
+
+
+/* Pendulum */
+
+/* Pendulum Container */
+.pendulum {
+  position: relative;   /* Changed from absolute to relative */
+  max-width: 100%;
+  width: 220px;
+  height: 180px;
+  background-color: #fafbff;
+  border-radius: 5%;
+  align-items: center;
+  border-top: 20px solid #fafbff;
+  margin: 30px auto; /* Center horizontally and add vertical margin */
+  padding-top: 80px; /* Add some padding to the top */
+  display: flex;
+  justify-content: center; /* Center the pendulum balls horizontally */
+}
+
+
+
+/* Pendulum Box that holds the balls */
+.pendulum_box {
+  display: flex;
+  justify-content: space-between; /* Evenly space the balls */
+  align-items: center;            /* Vertically align the balls */
+  padding: 0 10px;                /* Adjust spacing around the balls */
+  position: relative;             /* Allows absolute positioning for pendulum balls */
+  width: 100%;                    /* Make sure it stretches across the pendulum container */
+  box-sizing: border-box; /* Prevent padding from adding to the total width */
+
+}
+
+
+
+/* Ball Style */
+.ball {
+  height: 40px;       /* Set equal height */
+  width: 40px;        /* Set equal width */
+  border-radius: 50%; /* Make them round */
+  background-color: #1f3d7a;
+  position: relative;
+  transform-origin: 50% -300%; /* Create pivot point for the rotation */
+}
+
+/* Line attached to each ball */
+.ball::before {
+  content: '';
+  width: 2px;
+  height: 120px;
+  background-color: #929292;
+  left: 18px;
+  top: -120px;
+  position: absolute;
+}
+
+/* Animation for the first ball */
+.ball.first {
+  animation: firstball 0.9s alternate ease-in infinite;
+}
+
+@keyframes firstball {
+  0% {
+    transform: rotate(35deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Animation for the last ball */
+.ball.last {
+  animation: lastball 0.9s alternate ease-out infinite;
+}
+
+@keyframes lastball {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-35deg);
+  }
+}
+
+
+
+
+/* === CARD ANIMATION WIDGET === */
+
+.card-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+
+}
+
+
+/* Board container */
+.card-animation .board {
+  /* old value: --card-width: min(200px, 20vmin); */
+  --card-width: min(100px, 10vmin); /* reduced from 200px: 140px, 14vmin */
+  display: flex;
+  align-items: center;
+  width: calc(5 * var(--card-width));
+  box-sizing: content-box;
+  aspect-ratio: 16/9;
+  transform: rotateX(60deg);
+  border: 4px solid black;
+  border-radius: 16px;
+  padding: 1rem 3rem;
+  background: hsl(201deg, 100%, 32%);
+  transform-style: preserve-3d;
+
+}
+
+
+
+/* Ensure 3D behavior inside nested elements */
+.card-animation .card,
+.card-animation .wrapper,
+.card-animation .content {
+  transform-style: preserve-3d;
+}
+
+/* Each card setup */
+.card-animation .card {
+  --duration: 1200ms;
+  position: absolute;
+  width: var(--card-width);
+  aspect-ratio: 20/29;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  transition: all 200ms;
+  pointer-events: none;
+}
+
+/* Card positioning in Z-space */
+.card-animation .card:nth-child(1) { transform: translateZ(3px); }
+.card-animation .card:nth-child(2) { transform: translateZ(6px); }
+.card-animation .card:nth-child(3) { transform: translateZ(9px); }
+.card-animation .card:nth-child(4) { transform: translateZ(12px); }
+
+.card-animation .wrapper {
+  pointer-events: initial;
+  display: block;
+  position: relative;
+  height: 100%;
+  transition: all var(--duration) ease-out;
+  transform-origin: 200% 50%;
+}
+
+.card-animation .content {
+  display: block;
+  height: 100%;
+  transition: all var(--duration);
+}
+
+/* Card faces */
+.card-animation .face {
+  transition: transform calc(var(--duration) * 3 / 4);
+  transition-delay: calc(var(--duration) / 6);
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: calc(var(--card-width) / 20);
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Front faces */
+.card-animation .front {
+  transform: rotateZ(0.5turn) rotateY(-0.5turn);
+  border-width: 1px 0px;
+  border-color: black;
+  border-style: solid;
+}
+
+/* Card images */
+.card-animation .card:nth-of-type(1) .front {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/19/English_pattern_ace_of_spades.svg");
+}
+.card-animation .card:nth-of-type(2) .front {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5f/English_pattern_ace_of_clubs.svg");
+}
+.card-animation .card:nth-of-type(3) .front {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4d/English_pattern_8_of_spades.svg");
+}
+.card-animation .card:nth-of-type(4) .front {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f0/English_pattern_8_of_clubs.svg");
+}
+
+/* Card backs */
+.card-animation .back {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Bicyclebackside.jpg");
+  border: 1px solid black;
+}
+
+/* Flipped state */
+.card-animation .card.flipped:nth-child(1) { transform: translateZ(12px); }
+.card-animation .card.flipped:nth-child(2) { transform: translateZ(9px); }
+.card-animation .card.flipped:nth-child(3) { transform: translateZ(6px); }
+.card-animation .card.flipped:nth-child(4) { transform: translateZ(3px); }
+
+.card-animation .card.flipped .wrapper {
+  transform: rotateY(0.5turn);
+}
+
+.card-animation .card.flipped .content {
+  transform: rotateX(-0.5turn) rotateY(1.5turn);
+}
+
+
+
+
+/* === LAB VISUALS LAYOUT === */
+.lab-visuals {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;                /* space between pendulum and cards */
+  flex-wrap: nowrap;        /* keep them on the same row */
+  overflow: hidden;         /* hide overflow edges */
+  margin-top: 2rem;
+}
+
+
+
+/* Make pendulum share horizontal space */
+.lab-visuals .pendulum {
+  flex: 0 1 40%;            /* take about 40% of section width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  scale: 0.9;               /* slightly scale down if needed */
+  margin-top: 4rem; /* you can add space on top of the pendulum */
+
+}
+
+/* Card animation area */
+.lab-visuals .card-animation {
+  flex: 0 1 45%;            /* take about 45% of section width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  max-width: 450px;         /* limit card board width */
+  transform: scale(0.85);   /* scale down overall board */
+   margin-top: 4rem; /* you can add space on top of the cards */
+
+}
+
+
+
+/* Responsive fallback — stack vertically on small screens */
+@media (max-width: 900px) {
+  .lab-visuals {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .lab-visuals .pendulum,
+  .lab-visuals .card-animation {
+    flex: 1 1 100%;
+    max-width: none;
+    transform: scale(0.9);
+  }
+}
