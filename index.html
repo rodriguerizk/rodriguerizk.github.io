@@ -1,92 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Rodrigue Rizk | Computer Science & Engineering</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="assets/profile.jpg" type="image/x-icon">
+  <title>Dr. Rodrigue Rizk</title>
+  <meta name="author" content="Dr. Rodrigue Rizk">
+  <meta name="description" content="Research in AI, deep learning, reinforcement learning, cognitive modeling, autonomous learning systems, and quantum computing.">
+  <meta name="keywords" content="Artificial Intelligence, Machine Learning, Deep Learning, Reinforcement Learning, Cognitive Science, Computational Neuroscience, Intelligent Systems, Quantum Computing">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Scholar / Academic Citation Meta Tags -->
+  <meta name="citation_author" content="Dr. Rodrigue Rizk">
+  <meta name="citation_title" content="Lab">
+  <meta name="citation_publication_date" content="2025/11/08">
+  <meta name="citation_journal_title" content="Intelligent Systems Lab">
+  <meta name="citation_abstract" content="Research on foundations of learning, creativity, and intelligence, developing self-improving artificial agents.">
+  <meta name="citation_keywords" content="AI, Machine Learning, Deep Learning, Reinforcement Learning, Cognitive Modeling, Autonomous Agents">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Dr. Rodrigue Rizk">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rodriguerizk.github.io/">
+  <meta property="og:image" content="https://rodriguerizk.github.io/assets/profile.jpg">
+  <meta property="og:description" content="Research in AI, deep learning, reinforcement learning, cognitive modeling, autonomous learning systems, and quantum computing.">
+  <meta property="og:site_name" content="Dr. Rodrigue Rizk">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Rodrigue Rizk">
+  <meta name="twitter:description" content="Research in AI, deep learning, reinforcement learning, cognitive modeling, autonomous learning systems, and quantum computing.">
+  <meta name="twitter:image" content="https://rodriguerizk.github.io/assets/profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/profile.jpg" type="image/jpeg">
+
+
+  <!-- JSON-LD Structured Data for Academic Lab -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dr.Rodrigue Rizk",
+    "url": "https://rodriguerizk.github.io/",
+    "logo": "https://rodriguerizk.github.io/assets/profile.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/rodrigue-rizk",
+      "https://x.com/rizk_rodrigue/"
+    ],
+    "description": "Research on foundations of learning and intelligence, developing self-improving artificial agents.",
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Rodrigue Rizk",
+      "url": "https://rodriguerizk.github.io/"
+    },
+    "foundingDate": "2022",
+    "department": [
+      {"@type": "Organization","name": "Deep Learning and Neural Networks"},
+      {"@type": "Organization","name": "Reinforcement Learning, Game Theory, Theory of Mind, and Meta-Learning"},
+      {"@type": "Organization","name": "Small/Large Language Models and Agentic AI"},
+      {"@type": "Organization","name": "Physical-Inspired Computing and Physical AI"},
+      {"@type": "Organization","name": "Quantum Computing and Quantum Machine Learning"},
+      {"@type": "Organization","name": "Cognitive Modeling and Computational Neuroscience"}
+    ]
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-
-    <div class="container">
-    <!-- header -->
-    <header class="header">
-      <img src="assets/profile.jpg" alt="Dr. Rodrigue" class="headshot">
-      <div class="header-text">
-        <h1>Dr. Rodrigue Rizk</h1>
-        <p>Professor of Computer Science and Engineering<br>Department of XYZ, University of ABC</p>
-        <p>
-          <a href="mailto:you@university.edu">you@university.edu</a> · 
-          <a href="https://scholar.google.com/">Google Scholar</a> · 
-          <a href="https://github.com/yourusername">GitHub</a>
-        </p>
+<canvas id="matrix-bg"></canvas>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+  
+    <img id="profilePic" src="assets/profile.jpg" alt="Profile" class="profile-pic">
+  
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research-vision">Research Vision</a></li>
+        <li><a href="#research-interests">Research Interests</a></li>
+        <li><a href="#contact">Intelligent Systems Lab</a></li>
+      </ul>
+      <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">🌙</button>
       </div>
-    </header>
+    </nav>
+  </header>
 
-<hr>
+  <!-- About Section -->
+  <section id="about" class="about reveal">
 
-  <main>
+    <h2>About</h2>
+  <p>
+     <strong>Dr. Rodrigue Rizk</strong> is currently a <strong>professor and the Computer Science Graduate Program Director</strong> at the University of South Dakota. He also serves as the <strong>Chair of the IEEE Siouxland</strong> Section, and the Vice Director of Engineering at the Artificial Intelligence Research Lab. His interdisciplinary work bridges cognitive science, neural computation, and artificial intelligence.
+</p>
+</section>
 
 
-    <section id="research-summary" class="section-box alt1" style="max-width:700px; margin:auto; line-height:1.6; font-family:system-ui, sans-serif;">
-  <h2 style="text-align:center; margin-bottom:1em;">Research Overview</h2>
+
+<!-- About/Research Section 
+<section id="research-vision" class="about reveal">
+  <h2>Research Vision</h2>
 
   <p>
-    My research explores the <strong>foundations of learning, creativity, and intelligence</strong>, with the long-term goal of developing 
-    <strong>self-improving artificial agents</strong>. I investigate how systems can <strong>learn to learn</strong>, autonomously discovering 
-    abstractions, goals, and algorithms that enable them to adapt, plan, and reason in complex environments.
+    Dr. Rizk’s research seeks to understand and engineer the principles of <strong>learning, reasoning, and intelligence</strong>, in both biological and artificial systems. 
+    His work develops <strong>brain-inspired architectures</strong> that learn, plan, and adapt, transforming insights from <strong>neuroscience</strong> and <strong>cognitive science</strong> into computational frameworks for <strong>explainable and adaptive AI</strong>.
   </p>
 
   <p>
-    A central focus is on <strong>world models, lifelong learning, and self-referential agents</strong>, i.e., systems that build compact predictive 
-    representations of their environments, simulate imagined experiences, and continuously refine their own learning algorithms. 
-    This research spans <strong>deep learning, reinforcement learning, theoretical computer science, and cognitive modeling</strong>.
+    The central goal is to create <strong>self-improving agents</strong>, systems that can <strong>learn to learn</strong>, autonomously discover abstractions, goals, and algorithms, and continually refine both their knowledge and learning processes.
+    <br>
+    <em class="centered-quote">How can an intelligent system continually refine not only what it knows, but how it learns?</em>
   </p>
 
   <p>
-    At the heart of this effort lies a central question:<br>
-    <em>How can an intelligent system continually refine not only what it knows, but how it learns?</em>
+    This research explores <strong>world models, lifelong learning, and self-referential intelligence</strong>, agents that construct compact predictive models of their environments, simulate hypothetical experiences, and adapt through continual self-evaluation. 
+    The approach integrates advances in <strong>deep learning</strong>, <strong>reinforcement learning</strong>, and <strong>computational neuroscience</strong>.
   </p>
 
   <p>
-    Another key dimension of my research explores the <strong>intersection of quantum computation and learning</strong>.
-    Quantum systems offer a fundamentally different computational substrate, one capable of representing and processing information
-    in <strong>high-dimensional superposition and entangled spaces</strong>.
+    In parallel, Dr. Rizk investigates the <strong>intersection of quantum computation and learning</strong>. Quantum systems provide a fundamentally new substrate for information processing, operating in <strong>superposed and entangled state spaces</strong>, offering the potential for qualitatively new learning dynamics.
   </p>
 
   <p>
-    My work investigates how <strong>quantum principles can accelerate or transform learning</strong>, both theoretically and algorithmically.
+    His ongoing work unites <strong>quantum information theory</strong>, <strong>algorithmic learning</strong>, and <strong>theoretical neuroscience</strong> to explore how physical principles of computation might enable <strong>self-organizing, self-improving intelligent systems</strong>.
   </p>
-
+</section>
+-->
+<section id="research-vision" class="about reveal">
+  <h2>Research Vision</h2>
 
   <p>
-    These investigations connect <strong>quantum information theory</strong>, <strong>algorithmic learning</strong>, and
-    <strong>computational neuroscience</strong>, aiming to understand how physical principles of information processing might enable
-    new kinds of <strong>self-improving intelligent systems</strong>.
+    Dr. Rizk’s research lies at the intersection of <strong>machine learning, cognitive science, and quantum computation</strong>, aiming to uncover the principles that make intelligent systems adaptive, explainable, and self-improving.
   </p>
 
-    <hr>
-
-  <h2>Join Our Research</h2>
-  <p>
-    We are building a collaborative environment that explores the <strong>theoretical, algorithmic, and cognitive foundations of autonomous learning</strong>.
-    We welcome motivated researchers interested in combining <strong>rigorous theory</strong> with <strong>creative system design</strong>.
+  <p>His work develops <strong>brain-inspired architectures</strong> and <strong>learning algorithms</strong> that autonomously discover abstractions, goals, and reasoning strategies, bridging <strong>neuroscience</strong> and <strong>AI</strong> to advance our understanding of learning itself.
   </p>
-
-  <p><strong>Prospective students and collaborators</strong> with interests in:</p>
-  <ul>
-    <li>Deep Learning and Neural Networks</li>
-    <li>Reinforcement Learning, Game Theory, Theory of Mind, and Meta-Learning </li>
-    <li>Small/Large Language Models and Agentic AI</li>
-    <li> Physical-Inspired Computing and Physical AI</li>
-    <li>Quantum Computing and Quantum Machine Learning</li>
-    <li>Cognitive Modeling and Computational Neuroscience</li>
-  </ul>
-
+<p>
+At the heart of this effort lies a central question:
+    <br>
+    <em class="centered-quote">“How can an intelligent system continually refine not just what it knows, but the very process by which it learns?”</em>
+</p>
   <p>
-    are encouraged to reach out.
+    Current efforts explore <strong>world models</strong>, <strong>lifelong learning</strong>, and <strong>quantum-enhanced intelligence</strong>, integrating ideas from <strong>deep learning</strong>, <strong>reinforcement learning</strong>, and <strong>quantum information theory</strong> to design the next generation of <strong>self-evolving intelligent agents</strong>.
+  </p>
+</section>
+
+
+  <!-- Projects Section -->
+  <section id="research-interests" class="projects reveal">
+    <h2>Research Interests</h2>
+    <div class="project-grid">
+<div class="card">
+  <h3>AI and Deep Learning</h3>
+  <!-- Thumbnail image -->
+  <div class="card-thumbnail">
+    <img src="assets/DL.jpg" alt="Deep Learning">
+  </div>
+  <div class="accordion-container">
+    <button class="accordion">
+      Foundations <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Deep Learning and Neural Networks</li>
+        <li>Foundation Models, Small/Large Language Models (LLMs), and Agentic AI</li>
+        <li>Meta-Learning</li>
+      </ul>
+    </div>
+
+    <button class="accordion">
+      Brain-Inspired Models <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Physical-Inspired Computing and Physical AI</li>
+        <li>Brain-inspired computing and neural architectures</li>
+        <li>Cognitive Modeling and Computational Neuroscience</li>
+      </ul>
+    </div>
+
+    <button class="accordion">
+      Applications <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Explainable artificial intelligence (XAI)</li>
+        <li>Multi-Modal and Cross-Modal Learning</li>
+        <li>Bioinformatics and pattern recognition</li>
+        <li>Adaptive intelligent systems and decision support</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Reinforcement Learning</h3>
+  <!-- Thumbnail image -->
+  <div class="card-thumbnail">
+    <img src="assets/RL.jpg" alt="Reinforcement Learning">
+  </div>
+  <div class="accordion-container">
+    <button class="accordion">
+      Core Methods <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Deep Reinforcement Learning</li>
+        <li>Imitation Learning and Apprenticeship Learning</li>
+      </ul>
+    </div>
+
+    <button class="accordion">
+      Advanced Topics <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Planning under Uncertainty</li>
+        <li>Multi-Agent Systems</li>
+        <li>Game Theory and Theory of Mind</li>
+<li> Digital Twins, Autonomous vehicles, and self-driving cars</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Quantum Computing</h3>
+  <!-- Thumbnail image -->
+  <div class="card-thumbnail">
+    <img src="assets/QC.jpg" alt="Quantum Computing">
+  </div>
+  <div class="accordion-container">
+    <button class="accordion">
+      Quantum Fundamentals <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Quantum Computing and Quantum Machine Learning</li>
+        <li>Quantum Algorithms</li>
+        <li>Quantum Simulation</li>
+      </ul>
+    </div>
+
+    <button class="accordion">
+      Quantum Hardware <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Quantum Hardware and Qubit Technologies</li>
+        <li>Quantum Error Correction and Fault Tolerance</li>
+      </ul>
+    </div>
+
+    <button class="accordion">
+      Hybrid & Cryptography <span class="arrow">&#9660;</span>
+    </button>
+    <div class="panel">
+      <ul>
+        <li>Hybrid Quantum-Classical Algorithms</li>
+        <li>Quantum Cryptography and Communication</li>
+        <li>Emerging Technologies</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+  </section>
+
+
+
+  <!-- Intelligent Systems Lab Section -->
+  <section id="contact" class="research reveal">
+    <h2>Lab</h2>
+  <p>
+    Dr. Rizk is building a collaborative environment that explores the <strong>theoretical, algorithmic, and cognitive foundations of autonomous learning</strong>.
+    <strong>Prospective students and collaborators</strong> with interests in combining <strong>rigorous theory</strong> with <strong>creative system design</strong> are encouraged to reach out.
   </p>
 
   <p>
@@ -94,115 +288,56 @@
     <strong>mathematical insight</strong>, <strong>algorithmic innovation</strong>, and <strong>imagination</strong>, you will find a
     natural home in this research effort.
   </p>
+    <a href="https://www.ai-research-lab.org/" class="btn btn-center">Explore Research</a>
+  </section>
 
-  <p style="text-align:center; margin-top:1.5em;">
-    <a href="research.html" style="text-decoration:none; font-weight:bold;">Read the full research vision →</a>
-  </p>
-</section>
 
+  <!-- Contact Section
+  <section id="contact" class="contact reveal">
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email or social media!</p>
+  </section>
+ -->
+
+
+
+  <!-- Footer / Social Links -->
+  <footer class="footer">
+  <div class="footer-quote">
+    <blockquote>
+      “<i>The limits of machine intelligence are the limits of our imagination</i>.”<span class="quote-author">— Rodrigue Rizk, Ph.D.</span>
+    </blockquote>
     
-    <!-- Featured Projects -->
-    <section id="projects">
-      <h3>🚀 Featured Projects</h3>
-      <div class="project-grid">
-        <div class="project-card ai">
-          <h4>Neural Architecture Search</h4>
-          <span class="project-tag">AI</span>
-          <p>Automated discovery of neural network architectures for image classification tasks.</p>
-          <a href="#" class="btn" target="_blank">Learn More</a>
-        </div>
-        <div class="project-card rl">
-          <h4>Multi-Agent Reinforcement Learning</h4>
-          <span class="project-tag">RL</span>
-          <p>Developed scalable algorithms for coordinating multiple agents in complex environments.</p>
-          <a href="#" class="btn" target="_blank">Learn More</a>
-        </div>
-        <div class="project-card quantum">
-          <h4>Quantum Optimization Algorithms</h4>
-          <span class="project-tag">Quantum</span>
-          <p>Exploring quantum algorithms to solve combinatorial optimization problems faster than classical methods.</p>
-          <a href="#" class="btn" target="_blank">Learn More</a>
-        </div>
-      </div>
-    </section>
+  </div>
+   <!-- <p>Connect with me:</p> -->
+    <div class="social-links">
+       <!--
+      <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      -->
+      <a href="https://www.usd.edu/research-and-faculty/faculty-and-staff/rodrigue-rizk" target="_blank" rel="noopener noreferrer" aria-label="University" title="University Profile">
+       <i class="fas fa-university"></i>
+      </a>
 
-    <!-- Publications -->
-    <section id="publications">
-      <h3>📚 Selected Publications</h3>
-
-      <!-- Search bar -->
-      <input type="text" id="pub-search" placeholder="Search publications...">
-
-      <!-- Filter buttons -->
-      <div class="pub-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ai">AI</button>
-        <button class="filter-btn" data-filter="rl">Reinforcement Learning</button>
-        <button class="filter-btn" data-filter="quantum">Quantum Computing</button>
-      </div>
-
-      <ul class="pub-list">
-        <li class="pub-item ai" data-year="2025">
-          <span class="pub-year">2025</span>
-          <b>Sample AI Paper 1</b>, <i>NeurIPS</i>
-          <span class="pub-tags">AI</span>
-          <a href="papers/sample-paper.pdf" class="btn" target="_blank">PDF</a>
-          <p class="pub-abstract">This paper explores cutting-edge neural network architectures for image recognition.</p>
-        </li>
-        <li class="pub-item rl" data-year="2024">
-          <span class="pub-year">2024</span>
-          <b>Reinforcement Learning Paper</b>, <i>ICML</i>
-          <span class="pub-tags">RL</span>
-          <a href="#" class="btn">DOI</a>
-          <p class="pub-abstract">Introduces a novel RL algorithm for multi-agent systems.</p>
-        </li>
-        <li class="pub-item quantum" data-year="2023">
-          <span class="pub-year">2023</span>
-          <b>Quantum Computing Paper</b>, <i>Quantum</i>
-          <span class="pub-tags">Quantum</span>
-          <a href="#" class="btn">PDF</a>
-          <p class="pub-abstract">Demonstrates a quantum algorithm for solving optimization problems faster than classical methods.</p>
-        </li>
-        <li class="pub-item ai" data-year="2022">
-          <span class="pub-year">2022</span>
-          <b>AI Paper 2</b>, <i>CVPR</i>
-          <span class="pub-tags">AI</span>
-          <a href="#" class="btn">PDF</a>
-          <p class="pub-abstract">Focuses on self-supervised learning in computer vision tasks.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Teaching -->
-    <section id="teaching">
-      <h3>🎓 Teaching</h3>
-      <ul>
-        <li><b>CSE 540:</b> Deep Learning Foundations</li>
-        <li><b>CSE 680:</b> Quantum Computing for Engineers</li>
-        <li><b>CSE 720:</b> Reinforcement Learning and Control</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h3>✉️ Contact</h3>
-      <p>Email: <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
-      <p>Connect: 
-        <a href="#" target="_blank">LinkedIn</a> | 
-        <a href="#" target="_blank">Google Scholar</a>
-      </p>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Prof. [Your Name]. All rights reserved.</p>
-    <p>No part of this website, including text, images, or code, may be copied, reproduced, or redistributed without permission.</p>
-    <p><i>“The limits of machine intelligence are the limits of our imagination.”</i></p>
+      <a href="https://www.linkedin.com/in/rodrigue-rizk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://x.com/rizk_rodrigue/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="mailto:rodrigue.rizk@usd.edu" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p class="copyright">© 2025 Dr. Rodrigue Rizk. All rights reserved.</p>
+<p>     Built with <span style="color: #e25555;">&#10084;, &#129504;, and &#9749;</span> using HTML, CSS, and JavaScript</p>
   </footer>
 
-  <!-- Script -->
-  <script src="js/script.js"></script>
+  <!-- JS Scripts -->
+  <script src="script.js"></script>
+
+
+
 </body>
 </html>
