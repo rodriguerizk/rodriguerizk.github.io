@@ -67,7 +67,7 @@
   </script>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -288,6 +288,55 @@ At the heart of this effort lies a central question:
     <strong>mathematical insight</strong>, <strong>algorithmic innovation</strong>, and <strong>imagination</strong>, you will find a
     natural home in this research effort.
   </p>
+
+<!-- ✅ Flex container for Pendulum and Card Animation -->
+  <div class="lab-visuals">
+    
+    <!-- Existing Pendulum -->
+    <div class="pendulum">
+      <div class="pendulum_box">
+        <div class="ball first"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball last"></div>
+      </div>
+    </div>
+
+    <!-- ✅ Card Animation Embed -->
+    <div class="card-animation">
+      <article class="board">
+        <button class="card" onclick="this.classList.toggle('flipped')">
+          <span class="wrapper"><span class="content">
+            <span class="face back"></span>
+            <span class="face front"></span>
+          </span></span>
+        </button>
+        <button class="card" onclick="this.classList.toggle('flipped')">
+          <span class="wrapper"><span class="content">
+            <span class="face back"></span>
+            <span class="face front"></span>
+          </span></span>
+        </button>
+        <button class="card" onclick="this.classList.toggle('flipped')">
+          <span class="wrapper"><span class="content">
+            <span class="face back"></span>
+            <span class="face front"></span>
+          </span></span>
+        </button>
+        <button class="card" onclick="this.classList.toggle('flipped')">
+          <span class="wrapper"><span class="content">
+            <span class="face back"></span>
+            <span class="face front"></span>
+          </span></span>
+        </button>
+      </article>
+    </div>
+
+  </div> <!-- /.lab-visuals -->
+
+
     <a href="https://www.ai-research-lab.org/" class="btn btn-center">Explore Research</a>
   </section>
 
@@ -335,7 +384,7 @@ At the heart of this effort lies a central question:
   </footer>
 
   <!-- JS Scripts -->
-  <script src="./js/script.js"></script>
+  <script src="script.js"></script>
 
 
 
