@@ -1,412 +1,386 @@
-/* --- Page container for alignment --- */
-.container {
-  max-width: 900px; /* matches section box width */
-  margin: 0 auto;   /* center on page */
-  padding: 1em 2em; /* spacing around content */
-}
-
-/* --- Header layout --- */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 1.5em;
-  margin-bottom: 2em;
-}
-
-.headshot {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  flex-shrink: 0;
-}
-
-.header-text h1 {
-  font-size: 1.8em;  
-  margin: 0;
-  line-height: 1.2;
-  background: linear-gradient(90deg, #004080 0%, #007acc 50%, #00bfff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.header-text p {
-  margin: 0.3em 0;
-  font-size: 0.95em;
-  color: #333;
-}
-
-/* --- Responsive: stack on mobile --- */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .headshot {
-    width: 90px;
-    height: 90px;
-  }
-
-  .header-text h1 {
-    font-size: 1.5em;
-  }
-}
-
-/* --- Section boxes --- */
-.section-box {
-  max-width: 900px;   /* match header container width */
-  margin: 0 auto 1.8em auto;
-  padding: 1.5em 1.8em;
-  border-left: 6px solid #007acc;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  background-color: #fefefe;
-}
-
-
-/* -----------------------------
-   Base Styles
------------------------------ */
-body {
-  font-family: 'Roboto', sans-serif;
+/* Reset & Base Styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f5f7fa;
-  color: #222;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-main {
-  max-width: 950px;
-  margin: 2em auto;
-  padding: 0 1em;
-}
-
-h1, h2, h3, h4 {
-  margin: 0.3em 0;
-}
-
-/* -----------------------------
-   Header / Hero Section
------------------------------ */
+/* Header / Navbar */
 header {
-  background-color: #002147;
+  width: 100%;
+  background-color: #1f3d7a; /* navbar blue */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
   color: white;
-  text-align: center;
-  padding: 2.5em 1em;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #ffd700; /* gold underline */
+  transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li a.active::after {
+  width: 100%;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #ffd700;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 .profile-pic {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: 4px solid #fff;
-  width: 160px;
-  height: 160px;
   object-fit: cover;
-  margin-bottom: 1em;
 }
 
-.links a {
-  color: #aad4ff;
-  text-decoration: none;
-  margin: 0 0.5em;
-  font-weight: 500;
+
+.centered-quote {
+  display: block;       /* makes <em> behave like a block element */
+  text-align: center;   /* centers the text */
+  font-style: italic;   /* optional, <em> already italicizes */
+  font-size: 1.1rem;    /* optional, adjust size */
+  margin: 20px 0;       /* optional spacing above and below */
+  letter-spacing: 0.3px;
+
 }
 
-.links a:hover {
-  text-decoration: underline;
-}
 
-/* -----------------------------
-   Section Titles
------------------------------ */
-section {
-  margin-top: 2.5em;
+
+h2 {
+  text-align: center;
 }
 
 h3 {
-  color: #002147;
-  border-bottom: 2px solid #002147;
-  padding-bottom: 0.3em;
-  margin-bottom: 0.8em;
+  text-align: center;
 }
 
-/* -----------------------------
-   Research Interests
------------------------------ */
-#research ul {
-  list-style-type: disc;
-  margin-left: 1.5em;
-}
-
-/* -----------------------------
-   Featured Projects
------------------------------ */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.2em;
-  margin-top: 1em;
-}
-
-.project-card {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 1em;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.project-tag {
-  background-color: #00a5a5;
-  color: #fff;
-  font-size: 0.75em;
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
-  display: inline-block;
-  margin-bottom: 0.5em;
-}
-
-/* -----------------------------
-   Publications
------------------------------ */
-#pub-search {
-  width: 100%;
-  max-width: 400px;
-  padding: 0.5em 0.8em;
-  margin-bottom: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 0.95em;
-}
-
-.pub-filters {
-  margin-bottom: 1em;
-}
-
-.pub-filters .filter-btn {
-  background-color: #0055a5;
-  color: #fff;
+/* Theme Toggle */
+.theme-toggle-container button {
+  background: none;
   border: none;
-  border-radius: 5px;
-  padding: 0.3em 0.7em;
-  margin: 0.2em;
+  font-size: 22px;
   cursor: pointer;
-  font-size: 0.9em;
-  transition: background-color 0.2s;
+  transition: transform 0.3s ease;
 }
 
-.pub-filters .filter-btn:hover {
-  background-color: #003f7f;
+.theme-toggle-container button:hover {
+  transform: rotate(20deg);
 }
 
-.pub-filters .filter-btn.active {
-  background-color: #002147;
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1f3d7a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .accordion {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .panel {
+    padding: 0 10px;
+  }
 }
 
-.pub-list {
-  list-style-type: none;
-  padding: 0;
+/* Sections */
+section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.pub-item {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0.8em;
-  margin-bottom: 0.8em;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: box-shadow 0.2s;
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1f3d7a;
 }
 
-.pub-item:hover {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Year badge */
-.pub-year {
-  background-color: #0055a5;
-  color: #fff;
-  font-weight: bold;
-  padding: 0.2em 0.5em;
-  border-radius: 4px;
-  margin-right: 0.5em;
-  font-size: 0.85em;
-}
-
-/* Topic tags */
-.pub-tags {
-  background-color: #00a5a5;
-  color: #fff;
-  font-size: 0.75em;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  margin-left: 0.5em;
-}
-
-/* Abstract hidden by default */
-.pub-abstract {
-  display: none;
-  font-size: 0.9em;
+section p {
+  margin-bottom: 15px;
+  font-size: 16px;
   color: #333;
-  margin-top: 0.3em;
 }
 
-.pub-item:hover .pub-abstract {
-  display: block;
+section ul {
+  margin: 15px 0 15px 20px;
+  list-style-type: disc;
 }
 
-/* Buttons (PDF / DOI / Learn More) */
+
+/* Boxed Section Style */
+section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Light hover lift for interactivity */
+section:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Adjust text colors inside */
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1f3d7a;
+}
+
+section p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+
+/* Buttons */
 .btn {
-  background-color: #002147;
-  color: #fff;
-  padding: 0.25em 0.6em;
-  border-radius: 4px;
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #1f3d7a;
+  color: white;
   text-decoration: none;
-  font-size: 0.85em;
-  margin-left: 0.5em;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #003f7f;
+  background-color: #163060;
+  transform: translateY(-2px);
 }
 
-/* -----------------------------
-   Teaching
------------------------------ */
-#teaching ul {
-  list-style-type: square;
-  margin-left: 1.5em;
+.btn-center {
+  display: block;
+  width: max-content; /* button fits text width */
+  margin: 20px auto;  /* centers horizontally */
 }
 
-#teaching li {
-  margin-bottom: 0.3em;
+/* Project Cards */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
 }
 
-/* -----------------------------
-   Contact
------------------------------ */
-#contact a {
-  color: #0055a5;
-  text-decoration: none;
+.card {
+  background-color: white;
+  color: #222;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
 }
 
-#contact a:hover {
-  text-decoration: underline;
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1f3d7a;
 }
 
-/* -----------------------------
-   Footer
------------------------------ */
-footer {
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  border-color: #1f3d7a;
+}
+
+/* Footer */
+.footer {
   text-align: center;
-  background-color: #e8ebf0;
-  padding: 1.5em;
-  font-size: 0.9em;
+  padding: 15px 20px;  /* compact height old 40px 20px */
+  background-color: #f4f4f4;
+  color: #222;
+  margin-top: 50px;
+  border-top: 2px solid #1f3d7a;
+  font-size: 15px;
+}
+
+.footer p {
+  margin: 8px 0;
   color: #333;
-  margin-top: 2em;
 }
 
-footer i {
-  color: #002147;
+.footer .copyright {
+  font-size: 13px;
+  color: #666;
 }
 
-/* -----------------------------
-   Dark Mode (Optional)
------------------------------ */
-body.dark-mode {
+.social-links {
+  margin: 15px 0;
+}
+
+.social-links a {
+  font-size: 24px;
+  color: #1f3d7a;
+  margin: 0 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #163060;
+  transform: translateY(-2px);
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+}
+
+body.dark header, body.dark footer {
   background-color: #121212;
-  color: #eee;
 }
 
-body.dark-mode header {
-  background-color: #0a2342;
+body.dark section {
+  color: #e0e0e0;
 }
 
-body.dark-mode .project-card {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+body.dark .card {
+  background-color: #2a2a2a;
+  color: #eaeaea;
+  border: 2px solid transparent;
 }
 
-body.dark-mode .pub-item {
-  background-color: #1e1e1e;
-  border-color: #444;
+body.dark .card h3 {
+  color: #9cc2ff;
 }
 
-body.dark-mode #pub-search {
-  background-color: #1e1e1e;
-  border-color: #444;
-  color: #eee;
+body.dark .card p {
+  color: #ddd;
 }
 
-body.dark-mode footer {
-  background-color: #1b1b1b;
-  color: #aaa;
+body.dark .card:hover {
+  border-color: #9cc2ff;
+  box-shadow: 0 10px 20px rgba(156, 194, 255, 0.2);
 }
 
-body.dark-mode .pub-year {
-  background-color: #003366;
+body.dark .social-links a {
+  color: #9cc2ff;
 }
 
-body.dark-mode .pub-tags {
-  background-color: #008080;
+body.dark .social-links a:hover {
+  color: #6fa3ff;
+  transform: translateY(-2px);
 }
 
-body.dark-mode .pub-abstract {
-  color: #ccc;
+body.dark .btn {
+  background-color: #9cc2ff;
+  color: #121212;
 }
 
-/* -----------------------------
-   Responsive Design
------------------------------ */
-@media (max-width: 600px) {
-  header {
-    padding: 1.5em 0.5em;
-  }
-
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
-
-  main {
-    padding: 0 0.8em;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #pub-search {
-    max-width: 100%;
-  }
+body.dark .btn:hover {
+  background-color: #6fa3ff;
 }
 
-  /* --- Section box styling --- */
-  .section-box {
-    background-color: #fff;
-    border-left: 6px solid #007acc;
-    border-radius: 6px;
-    padding: 1.5em 1.8em;
-    margin-bottom: 1.8em;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
+body.dark section p {
+  color: #e0e0e0;
+}
 
-  /* --- Optional alternating colors for variety --- */
-  .alt1 { border-left-color: #007acc; background-color: #fefefe; }
-  .alt2 { border-left-color: #009688; background-color: #fcfcfc; }
-  .alt3 { border-left-color: #9c27b0; background-color: #fdfbff; }
-  .alt4 { border-left-color: #ff9800; background-color: #fffaf5; }
-  .alt5 { border-left-color: #3f51b5; background-color: #fafaff; }
-  .alt6 { border-left-color: #4caf50; background-color: #f8fff8; }
+body.dark section h2 {
+  color: #7ea9ff;
+}
 
+body.dark .footer p {
+  color: #e0e0e0;
+}
+
+body.dark .footer blockquote {
+  color: #e0e0e0;
+}
+
+body.dark .footer .quote-author {
+  color: #e0e0e0;
+}
 
 
 /* --- Gradient text effect for <strong> --- */
@@ -416,4 +390,156 @@ strong {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
+}
+
+/* --- Golden ring around profile pic --- */
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #ffd700; /* golden ring */
+  box-shadow: 0 0 4px rgba(255, 215, 0, 0.4); /* subtle glow */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.08); /* gentle zoom */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* slightly brighter glow */
+}
+
+
+
+/* --- Dark mode for boxed section --- */
+/* Dark Mode Section Boxes */
+body.dark section {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark section:hover {
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
+}
+
+
+
+/* Full-page subtle matrix background */
+#matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind all content */
+  pointer-events: none; /* clicks go through */
+}
+
+
+/* accordion for research interests */
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion {
+  background-color: #f2f2f2;
+  color: #333;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion:hover {
+  background-color: #e0e0e0;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #fff;
+  border-left: 2px solid #f2f2f2;
+  border-right: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+  border-radius: 0 0 4px 4px;
+  padding: 0 12px;
+}
+
+.panel.open {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  background-color: #f9f9f9;
+}
+
+.panel ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+
+/* Thumbnail styling */
+.card-thumbnail {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.card-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-thumbnail img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+.quote-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 16px;
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #0077cc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer blockquote {
+  font-style: italic;
+  margin: 0;
+  color: #555;
+}
+
+.footer .quote-author {
+  font-weight: bold;
+  margin: 5px 0 10px 0;
+  color: #333;
+}
+
+.footer p {
+  margin: 5px 0;  /* keeps spacing tight and neat */
 }
