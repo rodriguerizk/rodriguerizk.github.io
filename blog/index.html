@@ -11,9 +11,14 @@ title: Blog
   <div class="blog-grid">
     {% for post in paginator.posts %}
       <div class="blog-card">
-        <a href="{{ post.url }}">
-          <h2><i class="fas fa-pencil-alt"></i> {{ post.title }}</h2>
-        </a>
+      <a href="{{ post.url }}">
+        {% if post.image %}
+          <img src="{{ post.image }}" class="blog-thumb">
+        {% endif %}
+    <h2>
+      <i class="fas fa-pencil-alt"></i> {{ post.title }}
+    </h2>
+  </a>
         <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
         {% if post.excerpt %}
           <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
@@ -21,6 +26,11 @@ title: Blog
       </div>
     {% endfor %}
   </div>
+
+
+
+
+  
 
   <!-- Pagination -->
   <div class="pagination">
