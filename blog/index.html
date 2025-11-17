@@ -3,9 +3,12 @@ layout: default
 title: Blog
 ---
 
-<div class="blog-controls">
+<div class="blog-container">
+
+  <!-- Search Bar -->
   <input type="text" id="searchBar" onkeyup="searchPosts()" placeholder="Search posts...">
 
+  <!-- Category Filters -->
   <div class="blog-filters">
     <button onclick="filterPosts('all')" class="filter-btn active">All</button>
     {% assign cats = site.categories | sort %}
@@ -15,46 +18,49 @@ title: Blog
       </button>
     {% endfor %}
   </div>
-</div>
 
-<div class="blog-grid posts">
-  {% for post in paginator.posts %}
-    <div class="blog-card post-card category-{{ post.categories | first }}">
-      <a href="{{ post.url | relative_url }}">
-        {% if post.image %}
-          <img src="{{ post.image }}" class="blog-thumb">
-        {% endif %}
-        <h2><i class="fas fa-feather-pointed"></i> {{ post.title }}</h2>
-      </a>
-      <p class="post-date">
-        {{ post.date | date: "%B %d, %Y" }} — {{ post.reading_time }} min read
-      </p>
-      <p class="post-excerpt">
-        {{ post.excerpt | strip_html | truncatewords: 30 }}
-      </p>
-    </div>
-  {% endfor %}
-</div>
+  <!-- Blog Grid -->
+  <div class="blog-grid">
+    {% for post in paginator.posts %}
+      <div class="blog-card category-{{ post.categories | first }}">
+        <a href="{{ post.url | relative_url }}">
+          {% if post.image %}
+            <img src="{{ post.image }}" class="blog-thumb" alt="{{ post.title }}">
+          {% endif %}
+          <h2><i class="fas fa-feather-pointed"></i> {{ post.title }}</h2>
+        </a>
+        <p class="post-date">
+          {{ post.date | date: "%B %d, %Y" }} — {{ post.reading_time }} min read
+        </p>
+        <p class="post-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
 
-<!-- Pagination -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span>{{ page }}</span>
-    {% else %}
-      <a href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
+  <!-- Pagination -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
     {% endif %}
-  {% endfor %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
-  {% endif %}
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span>{{ page }}</span>
+      {% else %}
+        <a href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    {% endif %}
+  </div>
+
 </div>
 
+<!-- JS Scripts -->
 <script src="{{ site.baseurl }}/js/search.js"></script>
 
 <script>
