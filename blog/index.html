@@ -3,61 +3,70 @@ layout: default
 title: Blog
 ---
 
-<main class="content">
- <!-- <h1>Blog</h1> -->
+<div class="blog-controls">
+  <input type="text" id="searchBar" onkeyup="searchPosts()" placeholder="Search posts...">
 
-<div class="blog-filters">
-  <button onclick="filterPosts('all')" class="filter-btn active">All</button>
-  {% assign cats = site.categories | sort %}
-  {% for category in cats %}
-    <button onclick="filterPosts('{{ category[0] }}')" class="filter-btn">
-      {{ category[0] }}
-    </button>
-  {% endfor %}
+  <div class="blog-filters">
+    <button onclick="filterPosts('all')" class="filter-btn active">All</button>
+    {% assign cats = site.categories | sort %}
+    {% for category in cats %}
+      <button onclick="filterPosts('{{ category[0] }}')" class="filter-btn">
+        {{ category[0] }}
+      </button>
+    {% endfor %}
+  </div>
 </div>
 
-
-  <div class="blog-grid">
-    {% for post in paginator.posts %}
-      <div class="blog-card category-{{ post.categories | first }}">
-
-      <a href="{{ post.url }}">
+<div class="blog-grid">
+  {% for post in paginator.posts %}
+    <div class="blog-card category-{{ post.categories | first }}">
+      <a href="{{ post.url | relative_url }}">
         {% if post.image %}
           <img src="{{ post.image }}" class="blog-thumb">
         {% endif %}
-    <h2>
-      <i class="fa-regular fa-newspaper"></i> {{ post.title }}
-    </h2>
-  </a>
-        <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
-        {% if post.excerpt %}
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
+        <h2><i class="fas fa-feather-pointed"></i> {{ post.title }}</h2>
+      </a>
+      <p class="post-date">
+        {{ post.date | date: "%B %d, %Y" }} — {{ post.reading_time }} min read
+      </p>
 
+      <p class="post-excerpt">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+      </p>
+    </div>
+  {% endfor %}
+</div>
 
+<!-- Pagination -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
+  {% endif %}
 
-
-  
-
-  <!-- Pagination -->
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}">&laquo; Previous</a>
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span>{{ page }}</span>
+    {% else %}
+      <a href="{{ paginator.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
     {% endif %}
+  {% endfor %}
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span>{{ page }}</span>
-      {% else %}
-        <a href="{{ paginator.paginate_path | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  {% endif %}
+</div>
 
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}">Next &raquo;</a>
-    {% endif %}
-  </div>
-</main>
+<script src="{{ site.baseurl }}/js/search.js"></script>
+
+<script>
+function filterPosts(cat) {
+  const cards = document.querySelectorAll('.blog-card');
+  cards.forEach(card => {
+    card.style.display = (cat === 'all' || card.classList.contains('category-'+cat))
+      ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+</script>
