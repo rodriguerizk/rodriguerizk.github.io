@@ -17,9 +17,9 @@ title: Blog
   </div>
 </div>
 
-<div class="blog-grid">
+<div class="blog-grid posts">
   {% for post in paginator.posts %}
-    <div class="blog-card category-{{ post.categories | first }}">
+    <div class="blog-card post-card category-{{ post.categories | first }}">
       <a href="{{ post.url | relative_url }}">
         {% if post.image %}
           <img src="{{ post.image }}" class="blog-thumb">
@@ -29,7 +29,6 @@ title: Blog
       <p class="post-date">
         {{ post.date | date: "%B %d, %Y" }} — {{ post.reading_time }} min read
       </p>
-
       <p class="post-excerpt">
         {{ post.excerpt | strip_html | truncatewords: 30 }}
       </p>
