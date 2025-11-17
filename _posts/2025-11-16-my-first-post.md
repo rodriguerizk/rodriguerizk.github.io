@@ -4,40 +4,19 @@ title: "Welcome to My Blog"
 date: 2025-02-20
 
 # Broad category of the post
-categories: [tech]
+categories: [Intelligence]
 
 # Keywords for related posts + search
-tags: [introduction, life]
+tags: [AI, Intelligence, Theory of Mind, Game Theory, Reasoning, AgenticAI, Reinforcement Learning] 
 
 # Featured image (add your own)
-image: /assets/img/diagram.png
+image: /assets/img/featured.jpg
 ---
 
-Welcome to the very first post on my blog!  
-This space will be my digital lab, a place to document ideas, experiments, personal insights, and everything I learn along the way.
+The essence of **intelligence**, whether human or artificial, lies not merely in the accumulation or storage of information, but in the capacity to dynamically integrate context, experience, and memory to generate meaningful and timely responses.
 
-### What you’ll find here
+Connecting the dots is what makes knowledge powerful. It’s not about how much we know, but how we use what we know: drawing from experience, making associations in real time, and applying insight at just the right moment. That’s what makes a person witty. That’s what makes an information system intelligent. That’s what turns data into decisions, i.e. **agency**.
 
-Over time, this blog will include projects I’m building, personal reflections, and and random curiosities.  
-
-Think of it as a mix of **tech, creativity, and life**.
-
-### Why I’m Starting This
-
-I’ve always believed that writing is one of the best ways to think clearly.  
-Blogging forces you to structure ideas, refine them, and share them in a way that helps others.
-
-
-### What’s Coming Next
-
-I’m preparing several posts:
-
-- “Notes on AI, Learning, and Curiosity”
-- “Projects I’m Currently Building”
-- and more…
-
-Stay tuned ... this is just the beginning.
-
-Thanks for visiting.
+As the saying goes, “Wisdom is not having information, but knowing when and how to use it.” Storing knowledge is easy. Using it meaningfully? That’s the real art.
 
 
