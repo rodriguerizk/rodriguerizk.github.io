@@ -4,8 +4,17 @@ title: Blog
 ---
 
 <main class="content">
-  <h1>Blog</h1>
+ <!-- <h1>Blog</h1> -->
 
+<div class="blog-filters">
+  <button onclick="filterPosts('all')" class="filter-btn active">All</button>
+  {% assign cats = site.categories | sort %}
+  {% for category in cats %}
+    <button onclick="filterPosts('{{ category[0] }}')" class="filter-btn">
+      {{ category[0] }}
+    </button>
+  {% endfor %}
+</div>
 
 
   <div class="blog-grid">
