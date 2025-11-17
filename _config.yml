@@ -1,12 +1,15 @@
 title: "Rodrigue Rizk"
 description: "Personal and research website"
+highlighter: rouge
 baseurl: "" # leave empty for root
 url: "https://rodriguerizk.github.io"
 markdown: kramdown
 #theme: minima # You can remove this if you want to fully use your own HTML
 
+# Required for pagination
 plugins:
   - jekyll-paginate
+  - jekyll-reading-time
   
 paginate: 10               # number of posts per page
 paginate_path: "/blog/page:num/"
