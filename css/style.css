@@ -927,8 +927,8 @@ nav a i {
 .blog-card h2 {
   font-size: clamp(1rem, 2vw, 1.2rem); /* min 1rem, max 1.2rem, scales with viewport */
   white-space: nowrap;       /* keep on one line */
-  overflow: hidden;          /* hide overflow */
-  text-overflow: ellipsis;   /* fallback if really long */
+          /*  overflow: hidden;  hide overflow */
+    /*  text-overflow: ellipsis; fallback if really long */
 }
 
 .blog-card h2 i {
