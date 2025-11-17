@@ -940,6 +940,12 @@ nav a i {
   text-overflow: ellipsis;
 }
 
+
+.blog-card a {
+  text-decoration: none; /* remove underline */
+  color: inherit;        /* inherit color from parent */
+}
+
 /* =========================
    Search Bar
 ========================= */
