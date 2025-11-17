@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<article class="post-container">
+
+  {% if page.image %}
+    <img src="{{ page.image }}" class="post-hero">
+  {% endif %}
+
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <p class="post-meta">
+    {{ page.date | date: "%B %d, %Y" }} — {{ page.reading_time }} min read
+  </p>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <h3 class="related-title">Related Posts</h3>
+  <ul class="related-posts">
+    {% for post in site.posts %}
+      {% if post != page and post.tags | join: ',' contains page.tags[0] %}
+        <li>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+</article>
