@@ -1,4 +1,7 @@
 title: "Rodrigue Rizk"
-description: "My Personal Website"
+description: "Personal and research website"
+baseurl: "" # leave empty for root
+url: "https://rodriguerizk.github.io"
 markdown: kramdown
 #theme: minima # You can remove this if you want to fully use your own HTML
+
