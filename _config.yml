@@ -10,6 +10,8 @@ markdown: kramdown
 plugins:
   - jekyll-paginate
   - jekyll-reading-time
+  - jekyll-feed
+
   
 paginate: 10               # number of posts per page
 paginate_path: "/blog/page:num/"
