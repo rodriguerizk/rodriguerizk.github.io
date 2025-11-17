@@ -14,6 +14,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* 1. Make html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* 2. Make body a flex container in column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* 3. Main content grows to fill remaining space */
+main {
+  flex: 1;
+}
+
+
 /* Header / Navbar */
 header {
   width: 100%;
@@ -116,10 +135,6 @@ h3 {
   transform: rotate(20deg);
 }
 
-/* Main content grows to fill remaining space - for the blog */
-main {
-  flex: 1;
-}
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
