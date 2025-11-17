@@ -871,7 +871,7 @@ nav a i {
 
 /* Blog grid in default.html */
 
-/* Blog Grid */
+/* Blog Grid Layout */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -879,75 +879,17 @@ nav a i {
   margin-top: 2rem;
 }
 
-/* Individual Blog Card */
+/* Blog Cards */
 .blog-card {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .blog-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.blog-card h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.blog-card .post-date {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.blog-card .post-excerpt {
-  color: #333;
-  line-height: 1.5;
-}
-
-.blog-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.blog-card a:hover h2 {
-  color: #007acc;
-}
-
-/* Pagination */
-.pagination {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.pagination a, .pagination span {
-  margin: 0 0.3rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  text-decoration: none;
-  color: #007acc;
-  background-color: #f1f1f1;
-}
-
-.pagination span {
-  font-weight: bold;
-  background-color: #ddd;
-}
-
-.pagination a:hover {
-  background-color: #e0e0e0;
-}
-
-/* Icon inside blog card title */
-.blog-card h2 i {
-  margin-right: 0.5rem;
-  color: #007acc; /* matches navbar link hover */
-  vertical-align: middle;
 }
 
 .blog-thumb {
@@ -956,5 +898,73 @@ nav a i {
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 1rem;
+}
+
+.blog-card h2 i {
+  margin-right: 0.5rem;
+  color: #007acc;
+  transition: transform 0.3s;
+}
+.blog-card:hover h2 i {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Search Bar */
+#searchBar {
+  width: 100%;
+  padding: 12px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Filter Buttons */
+.blog-filters {
+  margin-bottom: 1rem;
+}
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  margin-right: .5rem;
+  cursor: pointer;
+  background: #eee;
+}
+.filter-btn.active {
+  background: #007acc;
+  color: #fff;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.pagination a, .pagination span {
+  margin: 0 0.3rem;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+  background: #e9f3ff;
+  border: 1px solid #cfe3ff;
+  text-decoration: none;
+  color: #007acc;
+}
+.pagination span {
+  background: #007acc;
+  color: #fff;
+}
+
+/* Dark Mode Compatibility */
+body.dark .blog-card {
+  background: #1f1f1f;
+}
+body.dark #searchBar {
+  background: #222;
+  color: #fff;
 }
 
