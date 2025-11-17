@@ -6,11 +6,7 @@ title: Blog
 <main class="content">
   <h1>Blog</h1>
 
-  <pre>
-{% for post in site.posts %}
-{{ post.title }} - {{ post.date }}
-{% endfor %}
-</pre>
+
 
   <div class="blog-grid">
     {% for post in paginator.posts %}
