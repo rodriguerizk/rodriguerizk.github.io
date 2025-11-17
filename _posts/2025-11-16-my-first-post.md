@@ -10,7 +10,7 @@ categories: [tech]
 tags: [introduction, webdev, life]
 
 # Featured image (add your own)
-image: /assets/img/diagram.jpg
+image: /assets/img/diagram.png
 ---
 
 Welcome to the very first post on my blog!  
