@@ -116,6 +116,11 @@ h3 {
   transform: rotate(20deg);
 }
 
+/* Main content grows to fill remaining space - for the blog */
+main {
+  flex: 1;
+}
+
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .navbar ul {
