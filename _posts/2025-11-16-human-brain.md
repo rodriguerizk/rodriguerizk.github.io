@@ -1,6 +1,16 @@
 ---
-layout: default
+layout: post
 title: "Human Brain"
+date: 2025-10-16
+
+# Broad category of the post
+categories: [Intelligence]
+
+# Keywords for related posts + search
+tags: [AI, Intelligence, Theory of Mind, Game Theory, Reasoning, AgenticAI, Reinforcement Learning] 
+
+# Featured image (add your own)
+image: /assets/img/human-brain/featured.jpg
 ---
 
 It's fascinating how the **human brain** operates like a high-bandwidth, real-time **inference engine** when driving.
