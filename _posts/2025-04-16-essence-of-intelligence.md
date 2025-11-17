@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Welcome to My Blog"
-date: 2025-02-20
+title: "The Essence of Intelligence"
+date: 2025-04-16
 
 # Broad category of the post
 categories: [Intelligence]
