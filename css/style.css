@@ -923,6 +923,14 @@ nav a i {
   margin: 0 0 0.5rem 0;
 }
 
+/* added this to make title fit in each blog post featured card on one line */
+.blog-card h2 {
+  font-size: clamp(1rem, 2vw, 1.2rem); /* min 1rem, max 1.2rem, scales with viewport */
+  white-space: nowrap;       /* keep on one line */
+  overflow: hidden;          /* hide overflow */
+  text-overflow: ellipsis;   /* fallback if really long */
+}
+
 .blog-card h2 i {
   margin-right: 0.5rem;
   color: #007acc;
@@ -945,6 +953,8 @@ nav a i {
   text-decoration: none; /* remove underline */
   color: inherit;        /* inherit color from parent */
 }
+
+
 
 /* =========================
    Search Bar
