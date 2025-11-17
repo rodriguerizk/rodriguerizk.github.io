@@ -10,7 +10,7 @@ categories: [Intelligence]
 tags: [AI, Intelligence, Theory of Mind, Game Theory, Reasoning, AgenticAI, Reinforcement Learning] 
 
 # Featured image (add your own)
-image: /assets/img/featured.jpg
+image: /assets/img/essence-of-intelligence/featured.jpg
 ---
 
 The essence of **intelligence**, whether human or artificial, lies not merely in the accumulation or storage of information, but in the capacity to dynamically integrate context, experience, and memory to generate meaningful and timely responses.
