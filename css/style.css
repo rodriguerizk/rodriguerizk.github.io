@@ -1144,6 +1144,7 @@ body.dark .post-card:hover, body.dark .blog-card:hover {
 /* =========================
    Subscribe Section
 ========================= */
+/*
 .subscribe-container {
   background-color: #f4f4f4;
   padding: 1.5rem;
@@ -1199,10 +1200,11 @@ body.dark .subscribe-container {
 .subscribe-form button:hover {
   background-color: #005fa3;
 }
-
+*/
 /* =========================
    Pagination
 ========================= */
+/*
 .pagination {
   margin-top: 2rem;
   text-align: center;
@@ -1222,10 +1224,12 @@ body.dark .subscribe-container {
   margin: 0 0.5rem;
   font-weight: bold;
 }
-
+*/
 /* =========================
    Blog Controls (Search & Filter)
 ========================= */
+
+/*
 .blog-controls {
   display: flex;
   flex-wrap: wrap;
@@ -1261,8 +1265,9 @@ body.dark .subscribe-container {
   background-color: #0077cc;
   color: #fff;
 }
-
+*/
 /* Dark Mode Blog Controls */
+/*
 body.dark #searchBar {
   background-color: #1a1a1a;
   border: 1px solid #444;
@@ -1278,5 +1283,4 @@ body.dark .filter-btn.active, body.dark .filter-btn:hover {
   background-color: #0077cc;
   color: #fff;
 }
-
-
+*/
