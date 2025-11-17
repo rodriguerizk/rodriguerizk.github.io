@@ -2,6 +2,31 @@
 layout: default
 ---
 
+<!-- Floating Share Bar -->
+<div class="floating-share">
+  <a class="share-btn linkedin"
+     href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+     target="_blank" rel="noopener" title="Share on LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a class="share-btn twitter"
+     href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}"
+     target="_blank" rel="noopener" title="Share on Twitter/X">
+    <i class="fab fa-twitter"></i>
+  </a>
+
+  <a class="share-btn email"
+     href="mailto:?subject={{ page.title }}&body=Check out this post: {{ site.url }}{{ page.url }}"
+     title="Share via email">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+  <button class="share-btn copy" onclick="copyPostLink()" title="Copy link">
+    <i class="fas fa-link"></i>
+  </button>
+</div>
+
 <article class="post-container">
 
   <!-- Featured Image -->
@@ -15,9 +40,61 @@ layout: default
     {{ page.date | date: "%B %d, %Y" }} — {{ page.reading_time }} min read
   </p>
 
+  <!-- Inline Share Bar (top) -->
+  <div class="share-bar">
+    <span>Share:</span>
+
+    <a class="share-btn linkedin"
+      href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+      target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a class="share-btn twitter"
+      href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}"
+      target="_blank" rel="noopener">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <a class="share-btn email"
+      href="mailto:?subject={{ page.title }}&body=Check out this post: {{ site.url }}{{ page.url }}">
+      <i class="fas fa-envelope"></i>
+    </a>
+
+    <button class="share-btn copy" onclick="copyPostLink()">
+      <i class="fas fa-link"></i>
+    </button>
+  </div>
+
   <!-- Post Content -->
   <div class="post-content">
     {{ content }}
+  </div>
+
+  <!-- Inline Share Bar (bottom) -->
+  <div class="share-bar">
+    <span>Share:</span>
+
+    <a class="share-btn linkedin"
+      href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+      target="_blank" rel="noopener">
+      <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a class="share-btn twitter"
+      href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&text={{ page.title }}"
+      target="_blank" rel="noopener">
+      <i class="fab fa-twitter"></i>
+    </a>
+
+    <a class="share-btn email"
+      href="mailto:?subject={{ page.title }}&body=Check out this post: {{ site.url }}{{ page.url }}">
+      <i class="fas fa-envelope"></i>
+    </a>
+
+    <button class="share-btn copy" onclick="copyPostLink()">
+      <i class="fas fa-link"></i>
+    </button>
   </div>
 
   <!-- Tags -->
@@ -36,3 +113,11 @@ layout: default
   </div>
 
 </article>
+
+<!-- Copy Link Script -->
+<script>
+function copyPostLink() {
+  navigator.clipboard.writeText("{{ site.url }}{{ page.url }}");
+  alert("Link copied!");
+}
+</script>
