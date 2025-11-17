@@ -949,3 +949,12 @@ nav a i {
   color: #007acc; /* matches navbar link hover */
   vertical-align: middle;
 }
+
+.blog-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
