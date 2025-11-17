@@ -860,3 +860,11 @@ body.dark section:hover {
     transform: scale(0.9);
   }
 }
+
+
+/* Blog nav bar */
+nav a i {
+  margin-right: 0.3rem; /* space between icon and text */
+  vertical-align: middle; /* align with text */
+}
+
