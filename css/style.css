@@ -881,7 +881,7 @@ nav a i {
 
 /* Individual Blog Card */
 .blog-card {
-  background-color: #f9f9f9; /* light card background */
+  background-color: #f9f9f9;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -893,7 +893,6 @@ nav a i {
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Card content */
 .blog-card h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -911,7 +910,6 @@ nav a i {
   line-height: 1.5;
 }
 
-/* Links inside cards */
 .blog-card a {
   text-decoration: none;
   color: inherit;
@@ -921,3 +919,33 @@ nav a i {
   color: #007acc;
 }
 
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination a, .pagination span {
+  margin: 0 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #007acc;
+  background-color: #f1f1f1;
+}
+
+.pagination span {
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+.pagination a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Icon inside blog card title */
+.blog-card h2 i {
+  margin-right: 0.5rem;
+  color: #007acc; /* matches navbar link hover */
+  vertical-align: middle;
+}
