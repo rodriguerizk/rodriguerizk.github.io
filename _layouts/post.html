@@ -4,31 +4,35 @@ layout: default
 
 <article class="post-container">
 
+  <!-- Featured Image -->
   {% if page.image %}
-    <img src="{{ page.image }}" class="post-hero">
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="post-featured-image">
   {% endif %}
 
+  <!-- Post Title & Meta -->
   <h1 class="post-title">{{ page.title }}</h1>
-
   <p class="post-meta">
     {{ page.date | date: "%B %d, %Y" }} — {{ page.reading_time }} min read
   </p>
 
+  <!-- Post Content -->
   <div class="post-content">
     {{ content }}
   </div>
 
-  <h3 class="related-title">Related Posts</h3>
-  <ul class="related-posts">
-    {% for post in site.posts %}
-      {% if post != page and post.tags | join: ',' contains page.tags[0] %}
-        <li>
-          <a href="{{ post.url | relative_url }}">
-            {{ post.title }}
-          </a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  <!-- Tags -->
+  {% if page.tags %}
+    <div class="post-tags">
+      <strong>Tags:</strong>
+      {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- Back to Blog Link -->
+  <div class="back-to-blog">
+    <a href="{{ site.baseurl }}/blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+  </div>
 
 </article>
