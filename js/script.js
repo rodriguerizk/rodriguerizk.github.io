@@ -181,7 +181,7 @@ const profilePic = document.getElementById('profilePic');
 
 
 // arrow js
-
+/*
 const scrollArrow = document.getElementById("scroll-arrow");
 
 window.addEventListener("scroll", () => {
@@ -209,4 +209,43 @@ scrollArrow.addEventListener("click", () => {
       behavior: "smooth"
     });
   }
+});
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const scrollArrow = document.getElementById("scroll-arrow");
+  const sections = [...document.querySelectorAll(".scroll-section")];
+
+  // Flip arrow depending on scroll position
+  window.addEventListener("scroll", () => {
+    scrollArrow.innerHTML =
+      (window.scrollY + window.innerHeight >= document.body.scrollHeight - 10)
+        ? '<i class="fas fa-arrow-up"></i>'
+        : '<i class="fas fa-arrow-down"></i>';
+  });
+
+  scrollArrow.addEventListener("click", () => {
+
+    const currentPos = window.scrollY;
+    const screenHeight = window.innerHeight;
+
+    // If at bottom → scroll to top
+    if (currentPos + screenHeight >= document.body.scrollHeight - 10) {
+      return window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Find next section below current viewport
+    const nextSection = sections.find(sec =>
+      sec.offsetTop > currentPos + 50
+    );
+
+    if (nextSection) {
+      window.scrollTo({
+        top: nextSection.offsetTop,
+        behavior: "smooth"
+      });
+    }
+  });
+
 });
