@@ -1442,3 +1442,17 @@ body.dark #snackbar {
   background-color: #1f7aff;
 }
 
+
+
+
+
+/***************
+Mascot animation
+*******************/
+
+.mascot:hover {
+    transform: scale(1.1); /* slightly grow on hover */
+}
+.open-eyes { display: none; }
+.mascot:hover .closed-eyes { display: none; }
+.mascot:hover .open-eyes { display: block; }
