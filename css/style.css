@@ -1473,9 +1473,12 @@ Mascot animation
 .ascii:hover::after {
   content: "(◕_◕)";
   /*transform: scale(1.5);*/ /* grow mascot */
-  color: yellow; /* optional: change color on hover */
+ /*  color: yellow; optional: change color on hover */
 }
-
+/* Dark Mode Support */
+body.dark .ascii {
+  color: yellow;
+ }
 
 
 /****************** Tools ***************
