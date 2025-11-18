@@ -15,7 +15,7 @@ body {
 }
 
 /* make curson a feather */
-body {
+a:hover, button:hover {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='32' width='32'><text y='24' font-size='24'>🪶</text></svg>") 0 0, auto;
 }
 
