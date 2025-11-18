@@ -14,13 +14,12 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.text-hover {
+/* change color on hover */
+h1:hover, h2:hover, h3:hover {
+  color: #00b7ff;
   transition: color 0.25s ease;
 }
 
-.text-hover:hover {
-  color: #00b7ff;
-}
 
 
 
