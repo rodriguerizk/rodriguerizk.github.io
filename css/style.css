@@ -14,10 +14,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* make curson a feather */
-a:hover, button:hover {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='32' width='32'><text y='24' font-size='24'>🪶</text></svg>") 0 0, auto;
-}
 
 
 /* 1. Make html and body take full height */
