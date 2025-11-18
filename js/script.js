@@ -178,3 +178,35 @@ const profilePic = document.getElementById('profilePic');
   });
 
 
+
+
+// arrow js
+
+const scrollArrow = document.getElementById("scroll-arrow");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    scrollArrow.classList.remove("hidden");
+    scrollArrow.innerHTML = '<i class="fas fa-arrow-up"></i>'; // show UP arrow
+  } else {
+    scrollArrow.classList.remove("hidden");
+    scrollArrow.innerHTML = '<i class="fas fa-arrow-down"></i>'; // show DOWN arrow
+  }
+});
+
+// Click behavior
+scrollArrow.addEventListener("click", () => {
+  if (window.scrollY < 200) {
+    // Scroll down until content starts
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth"
+    });
+  } else {
+    // Scroll back to top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+});
