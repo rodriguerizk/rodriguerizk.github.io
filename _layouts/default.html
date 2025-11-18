@@ -27,19 +27,24 @@
   <meta name="citation_abstract" content="Research on foundations of learning, creativity, and intelligence, developing self-improving artificial agents.">
   <meta name="citation_keywords" content="AI, Machine Learning, Deep Learning, Reinforcement Learning, Cognitive Modeling, Autonomous Agents">
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Dr. Rodrigue Rizk">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rodriguerizk.github.io/">
-  <meta property="og:image" content="https://rodriguerizk.github.io/assets/profile.jpg">
-  <meta property="og:description" content="Research in AI, deep learning, reinforcement learning, cognitive modeling, autonomous learning systems, and quantum computing.">
-  <meta property="og:site_name" content="Dr. Rodrigue Rizk">
+<!-- Default OG/Twitter preview -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 150 | default: site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dr. Rodrigue Rizk">
-  <meta name="twitter:description" content="Research in AI, deep learning, reinforcement learning, cognitive modeling, autonomous learning systems, and quantum computing.">
-  <meta name="twitter:image" content="https://rodriguerizk.github.io/assets/profile.jpg">
+{% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+{% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/profile.jpg">
+  <meta name="twitter:image" content="{{ site.url }}/assets/profile.jpg">
+{% endif %}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 150 | default: site.description }}">
+
 
   <!-- Favicon -->
   <link rel="icon" href="{{ site.baseurl }}/assets/profile.jpg" type="image/jpeg">
