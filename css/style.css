@@ -1453,7 +1453,7 @@ Mascot animation
 .ascii::after {
   content: "(^_^)";
   display: inline-block;
-  font-size: 20px; /* adjust size */
+  /*font-size: 20px;*/ /* adjust size */
   transition: transform 0.2s ease, content 0.2s ease;
   cursor: pointer; /* optional: shows hover */
 
@@ -1467,6 +1467,8 @@ Mascot animation
   color: #7ea9ff;
   margin-right: 0.3em; /* <- adds space after mascot */
   margin-left: 0.5em; /* <- adds space before mascot */
+  vertical-align: middle; /* aligns mascot with text */
+
 
 
 
