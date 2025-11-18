@@ -1464,9 +1464,10 @@ Mascot animation
   text-align: center;
 
    /* Default color (for blue background) */
-  color: blue;
+  /*color: blue;*/
   margin-right: 0.3em; /* <- adds space after mascot */
   margin-left: 0.3em; /* <- adds space before mascot */
+
 
 
 }
@@ -1485,12 +1486,13 @@ body.dark .ascii {
 */
 
 /* Dark mode support */
+/*
 @media (prefers-color-scheme: dark) {
   .ascii::after {
     color: yellow; /* visible on dark mode */
   }
 
-
+*/
 
 /****************** Tools ***************
 ****************************************/
