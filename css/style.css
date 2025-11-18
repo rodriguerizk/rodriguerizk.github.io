@@ -14,10 +14,14 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-p:hover, h1:hover, h2:hover, h3:hover, span:hover, li:hover {
-  color: #00b7ff;
+.text-hover {
   transition: color 0.25s ease;
 }
+
+.text-hover:hover {
+  color: #00b7ff;
+}
+
 
 
 /* 1. Make html and body take full height */
