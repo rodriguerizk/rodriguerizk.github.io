@@ -1461,5 +1461,5 @@ Mascot animation
 /* On hover: change face and scale */
 .ascii:hover::after {
   content: "(◕_◕)";
-  transform: scale(1.5); /* grow mascot */
+  /*transform: scale(1.5);*/ /* grow mascot */
 }
