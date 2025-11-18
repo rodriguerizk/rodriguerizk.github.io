@@ -15,7 +15,7 @@ body {
 }
 
 /* change color on hover */
-h1:hover, h2:hover, h3:hover, span:hover, li:hover {
+h1:hover, h2:hover, h3:hover, li:hover {
   color: #00b7ff;
   transition: color 0.25s ease;
 }
