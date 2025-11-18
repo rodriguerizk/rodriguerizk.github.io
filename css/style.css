@@ -1450,9 +1450,16 @@ body.dark #snackbar {
 Mascot animation
 *******************/
 
-.mascot:hover {
-    transform: scale(1.1); /* slightly grow on hover */
+.ascii::after {
+  content: "(^_^)";
+  display: inline-block;
+  font-size: 20px; /* adjust size */
+  transition: transform 0.2s ease, content 0.2s ease;
+  cursor: pointer; /* optional: shows hover */
 }
-.open-eyes { display: none; }
-.mascot:hover .closed-eyes { display: none; }
-.mascot:hover .open-eyes { display: block; }
+
+/* On hover: change face and scale */
+.ascii:hover::after {
+  content: "(◕_◕)";
+  transform: scale(1.5); /* grow mascot */
+}
