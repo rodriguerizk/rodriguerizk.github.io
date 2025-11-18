@@ -116,7 +116,7 @@ layout: default
 <div id="snackbar">Copied to clipboard.</div>
 
 <!-- Copy Link Script -->
-
+<!-- 
 <script>
 function copyPostLink() {
   navigator.clipboard.writeText("{{ site.url }}{{ page.url }}")
@@ -127,6 +127,33 @@ function copyPostLink() {
       setTimeout(() => {
         snackbar.classList.remove("show");
       }, 2500); // 2.5 seconds visible
+    })
+    .catch(err => console.error("Copy failed:", err));
+}
+</script>
+-->
+
+<script>
+function copyPostLink() {
+  const text = "{{ site.url }}{{ page.url }}";
+
+  // Detect mobile devices
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  if (isMobile) {
+    // MOBILE → only use native browser popup (no custom snackbar)
+
+    navigator.clipboard.writeText(text).catch(err => console.error(err));
+    return;  // Stop here — don't show your snackbar
+  }
+
+  // DESKTOP → show snackbar
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      const snackbar = document.getElementById("snackbar");
+      snackbar.classList.add("show");
+
+      setTimeout(() => snackbar.classList.remove("show"), 2500);
     })
     .catch(err => console.error("Copy failed:", err));
 }
