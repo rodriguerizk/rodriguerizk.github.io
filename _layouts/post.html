@@ -113,7 +113,7 @@ layout: default
   </div>
 
 </article>
-<div id="toast" class="toast">Link copied to clipboard!</div>
+<div id="snackbar">Link copied!</div>
 
 <!-- Copy Link Script -->
 <!--
@@ -129,16 +129,15 @@ function copyPostLink() {
 function copyPostLink() {
   navigator.clipboard.writeText("{{ site.url }}{{ page.url }}")
     .then(() => {
-      const toast = document.getElementById("toast");
-      toast.classList.add("show");
+      const snackbar = document.getElementById("snackbar");
+      snackbar.classList.add("show");
 
       setTimeout(() => {
-        toast.classList.remove("show");
-      }, 2000); // Toast visible for 2 seconds
+        snackbar.classList.remove("show");
+      }, 2500); // 2.5 seconds visible
     })
-    .catch(err => {
-      console.error("Failed to copy: ", err);
-    });
+    .catch(err => console.error("Copy failed:", err));
 }
 </script>
+
 
