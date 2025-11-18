@@ -245,7 +245,10 @@ document.addEventListener("DOMContentLoaded", () => {
         top: nextSection.offsetTop,
         behavior: "smooth"
       });
-    }
+    }  else {
+    // No more sections → scroll all the way to bottom (footer)
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
   });
 
 });
