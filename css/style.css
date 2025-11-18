@@ -1460,12 +1460,14 @@ Mascot animation
 
     /* Fix shifting */
   transform-origin: center; /* grow from center */
-  width: 1.2em; /* reserve enough width for the bigger face */
+  width: 1.3em; /* reserve enough width for the bigger face */
   text-align: center;
 
    /* Default color (for blue background) */
-  color: white;
+  color: blue;
   margin-right: 0.3em; /* <- adds space after mascot */
+  margin-left: 0.3em; /* <- adds space before mascot */
+
 
 }
 
@@ -1476,9 +1478,18 @@ Mascot animation
  /*  color: yellow; optional: change color on hover */
 }
 /* Dark Mode Support */
+/*
 body.dark .ascii {
   color: yellow;
  }
+*/
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .ascii::after {
+    color: yellow; /* visible on dark mode */
+  }
+
 
 
 /****************** Tools ***************
