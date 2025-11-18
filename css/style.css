@@ -1464,9 +1464,9 @@ Mascot animation
   text-align: center;
 
    /* Default color (for blue background) */
-  /*color: blue;*/
+  color: #7ea9ff;
   margin-right: 0.3em; /* <- adds space after mascot */
-  margin-left: 0.3em; /* <- adds space before mascot */
+  margin-left: 0.5em; /* <- adds space before mascot */
 
 
 
