@@ -1,65 +1,89 @@
-/* Container */
+/* phoenician.css */
+
+/* Container styling */
 .container {
-  max-width: 400px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fdf6e3;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fdf6e3;
+    border: 2px solid #d4a373;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Input Field */
+/* Header */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #8b4513;
+}
+
+/* Input box */
 #nameInput {
-  width: 80%;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  transition: border-color 0.3s;
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #d4a373;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
 #nameInput:focus {
-  border-color: #f39c12;
+    border-color: #8b4513;
 }
 
-/* Button */
+/* Button styling */
 button {
-  padding: 0.5rem 1.5rem;
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #f39c12;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #d35400;
+    background-color: #a0522d;
 }
 
-/* Result Area */
+/* Result area */
 #resultArea {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: #fff3e0;
-  border: 1px solid #f5c290;
-  border-radius: 8px;
-  min-height: 2rem;
+    margin-top: 25px;
+    min-height: 50px;
+    padding: 15px;
+    background-color: #fff8dc;
+    border: 1px solid #d4a373;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Phoenician Output */
+/* Phoenician output */
 #phoenicianOutput {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #c0392b;
-  word-wrap: break-word;
+    font-size: 2.5rem;
+    font-family: 'Noto Sans Phoenician', serif;
+    color: #4b2e2e;
+    word-break: break-word;
 }
+
+/* Responsive */
+@media (max-width: 600px) {
+    #nameInput {
+        width: 100%;
+    }
+
+    #phoenicianOutput {
+        font-size: 2rem;
+    }
+}
+
 
 /*
 #phoenicianOutput {
