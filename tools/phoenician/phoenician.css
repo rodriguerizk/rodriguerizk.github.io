@@ -60,7 +60,7 @@ button:hover {
     margin-top: 25px;
     min-height: 50px;
     max-height: 100px;     /* optional: limits growth */
-    overflow-y: auto;      /* scroll if content exceeds height */
+    /*overflow-y: auto;*/      /* scroll if content exceeds height */
     padding: 15px;
     background-color: #fff8dc;
     border: 1px solid #d4a373;
