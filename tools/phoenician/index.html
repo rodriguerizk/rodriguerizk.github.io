@@ -1,48 +1,23 @@
 ---
 layout: tools-default
-title: Tools
+title: Phoenician Name Converter
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Phoenician Name Converter</title>
+<h1>Phoenician Name Converter</h1>
 
-  <!-- Social Share Preview -->
-  <meta property="og:title" content="Phoenician Name Converter">
-  <meta property="og:description" content="Convert English names into Phoenician script.">
-  <meta property="og:image" content="{{ site.baseurl }}/tools/phoenician/preview.jpg">
-  <meta property="og:type" content="website">
+<section class="container">
+  <label for="nameInput">Enter English Name:</label>
+  <input id="nameInput" type="text" placeholder="Enter English Name">
+  <button type="button" onclick="convertName()">Convert</button>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/tools/phoenician/phoenician.css">
-</head>
-<body>
-
-  <h1>Phoenician Name Converter</h1>
-  <div class="container">
-      <input id="nameInput" type="text" placeholder="Enter English Name">
-      <button onclick="convertName()">Convert</button>
-
-      <div id="resultArea">
-          <p id="phoenicianOutput"></p>
-      </div>
+  <div id="resultArea">
+    <p id="phoenicianOutput"></p>
   </div>
+</section>
 
-  <!-- JS Scripts -->
-  <script src="{{ site.baseurl }}/tools/phoenician/phoenician.js"></script>
-</body>
-</html>
+<!-- Styles -->
+<link rel="stylesheet" href="{{ site.baseurl }}/tools/phoenician/phoenician.css">
 
-
-
-
-
-
-
-
-
+<!-- JS Script -->
+<script src="{{ site.baseurl }}/tools/phoenician/phoenician.js"></script>
 
