@@ -1618,3 +1618,7 @@ body.dark .tool-btn:hover {
   gap: 2rem;
   justify-content: center;
 }
+
+.tool-card:hover i {
+  transform: rotate(-10deg) scale(1.1);
+}
