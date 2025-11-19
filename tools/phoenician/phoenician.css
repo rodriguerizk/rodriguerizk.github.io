@@ -1,51 +1,71 @@
-/*
-body {
-    font-family: Arial, sans-serif;
-    background: #f0efe7;
-    text-align: center;
-    padding: 40px;
-}
-*/
+/* Container */
 .container {
-    margin-top: 20px;
-    margin-left: 20px;
-        display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fdf6e3;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Input Field */
 #nameInput {
-    font-size: 1.3em;
-    padding: 10px;
-    width: 260px;
+  width: 80%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
+#nameInput:focus {
+  border-color: #f39c12;
+}
+
+/* Button */
 button {
-    padding: 10px 18px;
-    font-size: 1.2em;
-    margin-left: 8px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+button:hover {
+  background-color: #d35400;
+}
+
+/* Result Area */
 #resultArea {
-    margin-top: 30px;
-    width: 500px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* STATIC STONE IMAGE — replace with your own */
-   /* background-image: url("stone.jpg");
-    background-size: cover;
-    background-position: center;
-*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fff3e0;
+  border: 1px solid #f5c290;
+  border-radius: 8px;
+  min-height: 2rem;
 }
 
+/* Phoenician Output */
+#phoenicianOutput {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c0392b;
+  word-wrap: break-word;
+}
+
+/*
 #phoenicianOutput {
     font-size: 4em;
     color: #2b2b2b;
     text-shadow: 2px 2px 6px #000;
     font-family: "Noto Sans Phoenician", serif;
 }
+*/
