@@ -157,9 +157,10 @@
       <a href="https://x.com/rizk_rodrigue/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
         <i class="fa-brands fa-twitter"></i>
       </a>
-      <a href="mailto:rodrigue.rizk@usd.edu" aria-label="Email">
+      <a id="email-link" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
+      <span class="ascii"></span>
     </div>
     <p class="copyright">© 2025 Dr. Rodrigue Rizk. All rights reserved.</p>
 <p>     Built with <span style="color: #e25555;">&#10084;, &#129504;, and &#9749;</span> using HTML, CSS, and JavaScript</p>
@@ -167,6 +168,13 @@
 
   <!-- JS Scripts -->
   <script src="{{ site.baseurl }}/js/script.js"></script>
+    <!-- Place script here -->
+  <script>
+    const user = "rodrigue.rizk";
+    const domain = "usd.edu";
+    const email = `${user}@${domain}`;
+    document.getElementById("email-link").href = `mailto:${email}`;
+  </script>
 
 
 
