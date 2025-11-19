@@ -72,4 +72,16 @@ function convertName() {
     }
 
     document.getElementById("phoenicianOutput").textContent = result;
+
+    // Clear input and focus for next entry
+    const nameInput = document.getElementById("nameInput");
+    nameInput.value = '';
+    nameInput.focus();
+
+    // Add Enter key support
+document.getElementById("nameInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        convertName();
+    }
+});
 }
