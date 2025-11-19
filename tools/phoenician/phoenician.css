@@ -13,11 +13,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 /* Header */
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #8b4513;
+    text-align: center;
 }
 
 /* Input box */
