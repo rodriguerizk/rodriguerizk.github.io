@@ -31,10 +31,10 @@ button {
     margin-right: auto;
 
     /* STATIC STONE IMAGE — replace with your own */
-    background-image: url("stone.jpg");
+   /* background-image: url("stone.jpg");
     background-size: cover;
     background-position: center;
-
+*/
     display: flex;
     justify-content: center;
     align-items: center;
