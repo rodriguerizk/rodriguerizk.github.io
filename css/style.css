@@ -1464,7 +1464,7 @@ Mascot animation
   text-align: center;
 
    /* Default color (for blue background) */
-  color: #7ea9ff;
+  color: #1f3d7a;
   margin-right: 0.3em; /* <- adds space after mascot */
   margin-left: 0.5em; /* <- adds space before mascot */
   vertical-align: middle; /* aligns mascot with text */
@@ -1476,16 +1476,16 @@ Mascot animation
 
 /* On hover: change face and scale */
 .ascii:hover::after {
-  content: "(◕_◕)";
+  content: "(*_*)"; /* (◕_◕) */
   /*transform: scale(1.5);*/ /* grow mascot */
  /*  color: yellow; optional: change color on hover */
 }
 /* Dark Mode Support */
-/*
+
 body.dark .ascii {
-  color: yellow;
+  color: #9cc2ff;
  }
-*/
+
 
 /* Dark mode support */
 /*
