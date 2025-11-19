@@ -1455,7 +1455,7 @@ Mascot animation
   display: inline-block;
   font-size: 20px; /* adjust size */
   transition: transform 0.2s ease, content 0.2s ease;
-  cursor: pointer; /* optional: shows hover */
+  /* cursor: pointer; */ /* optional: shows hover */
 
 
     /* Fix shifting */
