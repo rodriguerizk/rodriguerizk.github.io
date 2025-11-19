@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C0JN1N142E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C0JN1N142E');
+</script>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="author" content="Dr. Rodrigue Rizk">
+  <meta name="description" content="Research in AI, deep learning, reinforcement learning, cognitive modeling, autonomous learning systems, and quantum computing.">
+  <meta name="keywords" content="Artificial Intelligence, Machine Learning, Deep Learning, Reinforcement Learning, Cognitive Science, Computational Neuroscience, Intelligent Systems, Quantum Computing">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Scholar / Academic Citation Meta Tags -->
+  <meta name="citation_author" content="Dr. Rodrigue Rizk">
+  <meta name="citation_title" content="Lab">
+  <meta name="citation_publication_date" content="2025/11/08">
+  <meta name="citation_journal_title" content="Intelligent Systems Lab">
+  <meta name="citation_abstract" content="Research on foundations of learning, creativity, and intelligence, developing self-improving artificial agents.">
+  <meta name="citation_keywords" content="AI, Machine Learning, Deep Learning, Reinforcement Learning, Cognitive Modeling, Autonomous Agents">
+
+<!-- Default OG/Twitter preview -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 150 | default: site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+{% if page.image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+{% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/profile.jpg">
+  <meta name="twitter:image" content="{{ site.url }}/assets/profile.jpg">
+{% endif %}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 150 | default: site.description }}">
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ site.baseurl }}/assets/profile.jpg" type="image/jpeg">
+
+
+  <!-- JSON-LD Structured Data for Academic Lab -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dr.Rodrigue Rizk",
+    "url": "https://rodriguerizk.github.io/",
+    "logo": "https://rodriguerizk.github.io/assets/profile.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/rodrigue-rizk",
+      "https://x.com/rizk_rodrigue/"
+    ],
+    "description": "Research on foundations of learning and intelligence, developing self-improving artificial agents.",
+    "founder": {
+      "@type": "Person",
+      "name": "Dr. Rodrigue Rizk",
+      "url": "https://rodriguerizk.github.io/"
+    },
+    "foundingDate": "2022",
+    "department": [
+      {"@type": "Organization","name": "Deep Learning and Neural Networks"},
+      {"@type": "Organization","name": "Reinforcement Learning, Game Theory, Theory of Mind, and Meta-Learning"},
+      {"@type": "Organization","name": "Small/Large Language Models and Agentic AI"},
+      {"@type": "Organization","name": "Physical-Inspired Computing and Physical AI"},
+      {"@type": "Organization","name": "Quantum Computing and Quantum Machine Learning"},
+      {"@type": "Organization","name": "Cognitive Modeling and Computational Neuroscience"}
+    ]
+  }
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
+
+</head>
+
+<body>
+<!-- <canvas id="matrix-bg"></canvas>  -->
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+  
+    <img id="profilePic" src="{{ site.baseurl }}/assets/profile.jpg" alt="Profile" class="profile-pic">
+  
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="{{ site.baseurl }}/"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="{{ site.baseurl }}/tools"><i class="fa-solid fa-crystal-ball"></i>Tools</a></li>
+     
+      </ul>
+      <div class="theme-toggle-container">
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+   <main>
+        {{ content }}
+    </main>
+
+<!-- Subscribe Section -->
+<div class="subscribe-container">
+  <h3>Subscribe to My Blog</h3>
+  
+  <!-- RSS Feed -->
+  <a href="{{ "/feed.xml" | relative_url }}" target="_blank" aria-label="RSS Feed" class="subscribe-button">
+    <i class="fas fa-rss"></i> Subscribe via RSS
+  </a>
+
+  <!-- Email Signup Form (Mailchimp example) -->
+  <form action="https://example.us1.list-manage.com/subscribe/post?u=XXXX&id=YYYY" method="post" target="_blank" class="subscribe-form">
+    <input type="email" name="EMAIL" placeholder="Your email" required>
+    <button type="submit">Subscribe via Email</button>
+  </form>
+</div>
+
+
+  <!-- Footer / Social Links -->
+  <footer class="footer">
+  <div class="footer-quote">
+    <blockquote>
+      “<i>The limits of machine intelligence are the limits of our imagination</i>.”<span class="quote-author">— Rodrigue Rizk, Ph.D.</span>
+    </blockquote>
+    
+  </div>
+   <!-- <p>Connect with me:</p> -->
+    <div class="social-links">
+       <!--
+      <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      -->
+      <a href="https://www.usd.edu/research-and-faculty/faculty-and-staff/rodrigue-rizk" target="_blank" rel="noopener noreferrer" aria-label="University" title="University Profile">
+       <i class="fas fa-university"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/rodrigue-rizk" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://x.com/rizk_rodrigue/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a id="email-link" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <span class="ascii"></span>
+    </div>
+    <p class="copyright">© 2025 Dr. Rodrigue Rizk. All rights reserved.</p>
+<p>     Built with <span style="color: #e25555;">&#10084;, &#129504;, and &#9749;</span> using HTML, CSS, and JavaScript</p>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="{{ site.baseurl }}/js/script.js"></script>
+    <!-- Place script here -->
+  <script>
+    const user = "rodrigue.rizk";
+    const domain = "usd.edu";
+    const email = `${user}@${domain}`;
+    document.getElementById("email-link").href = `mailto:${email}`;
+  </script>
+
+
+
+</body>
+</html>
