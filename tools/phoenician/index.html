@@ -1,20 +1,22 @@
 ---
 layout: tools-default
-title: Tools
+title: Phoenician Name Converter
 ---
 
-
 <h1>Phoenician Name Converter</h1>
-<div class="container">
-    <input id="nameInput" type="text" placeholder="Enter English Name">
-    <button onclick="convertName()">Convert</button>
 
-    <div id="resultArea">
-        <div id="phoenicianOutput"></div>
-    </div>
-</div>
+<section class="container">
+  <label for="nameInput">Enter English Name:</label>
+  <input id="nameInput" type="text" placeholder="Enter English Name">
+  <button type="button" onclick="convertName()">Convert</button>
 
-<!-- JS Scripts -->
-<script src="{{ site.baseurl }}/tools/phoenician/phoenician.js"></script>
+  <div id="resultArea">
+    <p id="phoenicianOutput"></p>
+  </div>
+</section>
+
+<!-- Styles -->
 <link rel="stylesheet" href="{{ site.baseurl }}/tools/phoenician/phoenician.css">
 
+<!-- JS Script -->
+<script src="{{ site.baseurl }}/tools/phoenician/phoenician.js"></script>
