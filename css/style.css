@@ -1467,7 +1467,7 @@ Mascot animation
   color: #1f3d7a;
   margin-right: 0.3em; /* <- adds space after mascot */
   margin-left: 0.5em; /* <- adds space before mascot */
-  vertical-align: 4px;  /* raise it a bit */
+  vertical-align: 1px;  /* raise it a bit */
 
 
 
