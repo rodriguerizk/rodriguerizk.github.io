@@ -386,7 +386,7 @@ At the heart of this effort lies a central question:
       <a href="https://x.com/rizk_rodrigue/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="mailto:rodrigue.rizk@usd.edu" aria-label="Email">
+      <a id="email-link" aria-label="Email">
         <i class="fas fa-envelope"></i>
       </a>
       <span class="ascii"></span>
@@ -395,14 +395,20 @@ At the heart of this effort lies a central question:
 <p>     Built with <span style="color: #e25555;">&#10084;, &#129504;, and &#9749;</span> using HTML, CSS, and JavaScript</p>
   </footer>
 
-  
+
   
 <div id="scroll-arrow">
   <i class="fas fa-arrow-down"></i>
 </div>
   <!-- JS Scripts -->
   <script src="js/script.js"></script>
-
+  <!-- Place script here -->
+  <script>
+    const user = "rodrigue.rizk";
+    const domain = "usd.edu";
+    const email = `${user}@${domain}`;
+    document.getElementById("email-link").href = `mailto:${email}`;
+  </script>
 
 
 </body>
