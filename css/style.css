@@ -1636,13 +1636,7 @@ body.dark .tool-btn:hover {
   display: flex;
   align-items: center;       /* vertically center text with picture */
   gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  position: relative;
+
 }
 
 /* Profile picture container */
@@ -1671,11 +1665,7 @@ body.dark .tool-btn:hover {
   color: #333;
 }
 
-/* Section heading styling */
-.about-text h2 {
-  margin-bottom: 15px;
-  color: #1f3d7a;
-}
+
 
 /* Responsive: stack picture above text */
 @media (max-width: 768px) {
