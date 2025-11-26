@@ -1638,14 +1638,23 @@ body.dark .tool-btn:hover {
   flex-wrap: wrap;          /* stack on small screens if needed */
 }
 
-/* Image styling */
+
+/* Profile picture styling */
 .profile-pic-about {
-  flex: 0 0 150px;          /* fixed width */
-  width: 120px;          /* adjust width as needed */
-  height: 120px;         /* keep it square */
-  border-radius: 50%;       /* optional rounded corners */
-  object-fit: cover;        /* ensure image scales nicely */
-  flex-shrink: 0;        /* prevent shrinking too much */
+  flex: 0 0 160px;           /* fixed width */
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;        /* circular */
+  object-fit: cover;
+  border: 4px solid #1f3d7a; /* theme color border */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* floating shadow */
+  position: relative;
+  top: -15px;                /* slight overlap for floating effect */
+  transition: transform 0.3s ease;
+}
+
+.profile-pic-about:hover {
+  transform: translateY(-5px); /* subtle hover lift */
 }
 
 
