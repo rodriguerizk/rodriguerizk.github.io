@@ -56,9 +56,9 @@ header {
 }
 
 .navbar {
-  position: sticky; /* or 'fixed' if you want it always on top */
-  top: 0;           /* stick to the top */
-  z-index: 1000;    /* keep it above other content */
+  position: fixed; /* or 'sticky' or 'fixed' if you want it always on top */
+  /*top: 0; */          /* stick to the top */
+  /*z-index: 1000;*/    /* keep it above other content */
   max-width: 1200px;
   margin: auto;
   display: flex;
