@@ -1631,59 +1631,37 @@ body.dark .tool-btn:hover {
 
 
 /* Profile pic in about me section */
-/* Container for picture + text */
-.about-container {
-  display: flex;
-  align-items: center;       /* vertically center text with picture */
-  gap: 30px;
-
+.about-content {
+  display: flex;            /* make children side by side */
+  align-items: center;      /* vertically center image and text */
+  gap: 20px;                /* space between image and text */
+  flex-wrap: wrap;          /* stack on small screens if needed */
 }
 
-/* Profile picture container */
-.profile-pic-container {
-  flex: 0 0 160px;
-  position: relative;
-}
-
-/* Profile image */
+/* Image styling */
 .profile-pic-about {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #1f3d7a;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  position: relative;
-  top: -20px;  /* slight overlap for floating effect */
+  flex: 0 0 150px;          /* fixed width */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;       /* optional rounded corners */
+  object-fit: cover;        /* ensure image scales nicely */
 }
 
-/* About text next to picture */
+/* Text styling */
 .about-text {
-  flex: 1;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
+  flex: 1;                  /* text takes remaining space */
 }
 
-
-
-/* Responsive: stack picture above text */
+/* Responsive: stack image on top on small screens */
 @media (max-width: 768px) {
-  .about-container {
+  .about=content {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
-  }
-
-  .profile-pic-about {
-    top: 0;
-    width: 140px;
-    height: 140px;
   }
 
   .about-text {
-    margin-top: 20px;
+    margin-top: 15px;       /* spacing between image and text */
   }
 }
 
