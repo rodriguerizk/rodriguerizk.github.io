@@ -1627,3 +1627,50 @@ body.dark .tool-btn:hover {
   margin-right: 2px;
 }
 
+
+
+
+/* Profile pic in about me section */
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* space between picture and text */
+  flex-wrap: wrap; /* wraps on smaller screens */
+  margin-top: 20px;
+}
+
+.profile-pic-container {
+  flex: 0 0 150px; /* fixed width for picture */
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 50%; /* circular profile pic */
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* subtle shadow */
+  border: 2px solid #1f3d7a; /* optional professional border */
+}
+
+/* About text styling */
+.about-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive: stack image on top for small screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic-container {
+    flex: none;
+    width: 150px;
+    margin-bottom: 20px;
+  }
+}
