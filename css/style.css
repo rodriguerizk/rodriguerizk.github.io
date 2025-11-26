@@ -48,7 +48,7 @@ main {
 header {
   width: 100%;
   background-color: #1f3d7a; /* navbar blue */
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -57,9 +57,7 @@ header {
 
 .navbar {
   max-width: 1200px;      /* keeps your content constrained */
-  width: 100%;            /* make it full width of header */
-  margin: 0 auto;         /* center the max-width */
-  /*margin: auto;*/
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
