@@ -1644,7 +1644,7 @@ body.dark .tool-btn:hover {
   flex: 0 0 150px; /* fixed width for picture */
 }
 
-.profile-pic {
+.profile-pic-about {
   width: 100%;
   border-radius: 50%; /* circular profile pic */
   object-fit: cover;
