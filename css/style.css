@@ -56,8 +56,10 @@ header {
 }
 
 .navbar {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1200px;      /* keeps your content constrained */
+  width: 100%;            /* make it full width of header */
+  margin: 0 auto;         /* center the max-width */
+  /*margin: auto;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
