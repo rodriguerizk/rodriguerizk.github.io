@@ -1631,62 +1631,25 @@ body.dark .tool-btn:hover {
 
 
 /* Profile pic in about me section */
-.about {
-  position: relative;
-  padding: 60px 20px; /* section padding */
-  background-color: #f9f9f9; /* optional light background */
-  border-radius: 12px;
-  max-width: 1100px;
-  margin: 60px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-}
-
 .about-content {
   display: flex;
   align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 30px; /* space between picture and text */
+  flex-wrap: wrap; /* wraps on smaller screens */
+  margin-top: 20px;
 }
 
 .profile-pic-container {
-  flex: 0 0 160px;
-  position: relative;
+  flex: 0 0 150px; /* fixed width for picture */
 }
 
 .profile-pic-about {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: 100%;
+  border-radius: 50%; /* circular profile pic */
   object-fit: cover;
-  border: 4px solid #1f3d7a; /* professional border */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* subtle floating effect */
-  position: relative;
-  top: -20px; /* slight overlap effect */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* subtle shadow */
+  border: 2px solid #1f3d7a; /* optional professional border */
 }
 
-.about-text {
-  flex: 1;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-}
 
-/* Responsive: stack picture on top for small screens */
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profile-pic-about {
-    top: 0; /* remove overlap on mobile */
-    width: 140px;
-    height: 140px;
-  }
-
-  .about-text {
-    margin-top: 15px;
-  }
-}
 
