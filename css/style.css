@@ -1641,11 +1641,15 @@ body.dark .tool-btn:hover {
 /* Image styling */
 .profile-pic-about {
   flex: 0 0 150px;          /* fixed width */
-  width: 100%;
-  height: auto;
-  border-radius: 8px;       /* optional rounded corners */
+  width: 120px;          /* adjust width as needed */
+  height: 120px;         /* keep it square */
+  border-radius: 50%;       /* optional rounded corners */
   object-fit: cover;        /* ensure image scales nicely */
+  flex-shrink: 0;        /* prevent shrinking too much */
 }
+
+
+
 
 /* Text styling */
 .about-text {
