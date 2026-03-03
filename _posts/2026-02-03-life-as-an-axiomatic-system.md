@@ -10,7 +10,7 @@ categories: [Life]
 tags: [AI, Intelligence, Theory of Mind, Game Theory, Reasoning, AgenticAI, Reinforcement Learning, Life, Math] 
 
 # Featured image (add your own)
-image: /assets/img/human-brain/featured.jpg
+image: /assets/img/life-as-an-axiomatic-system/featured.jpg
 ---
 
 One of the most beautiful concepts in math is the idea of axioms.
