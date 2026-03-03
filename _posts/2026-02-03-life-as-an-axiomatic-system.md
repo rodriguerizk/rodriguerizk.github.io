@@ -13,9 +13,9 @@ tags: [AI, Intelligence, Theory of Mind, Game Theory, Reasoning, AgenticAI, Rein
 image: /assets/img/life-as-an-axiomatic-system/featured.jpg
 ---
 
-One of the most beautiful concepts in math is the idea of axioms.
+One of the most beautiful concepts in math is the idea of **axioms**.
 
-Axioms are statements you accept without proof. You don’t question them. You don’t derive them. You just start there and build everything else on top.
+**Axioms** are statements you accept without proof. You don’t question them. You don’t derive them. You just start there and build everything else on top.
 
 The more I think about it, the more I realize life works the same way.
 
@@ -31,4 +31,4 @@ You can’t question everything at once. If you did, you’d never move.
 
 At some point, you have to accept a few things as given, otherwise you never start. 
 
-The mature mind doesn’t eliminate axioms. It’s about becoming aware of the ones you’re standing on.
+The mature mind doesn’t eliminate **axioms**. It’s about becoming aware of the ones you’re standing on.
