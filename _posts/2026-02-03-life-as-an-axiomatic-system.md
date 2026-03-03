@@ -4,7 +4,7 @@ title: "Life as an Axiomatic System"
 date: 2026-02-03
 
 # Broad category of the post
-categories: [Intelligence]
+categories: [Life]
 
 # Keywords for related posts + search
 tags: [AI, Intelligence, Theory of Mind, Game Theory, Reasoning, AgenticAI, Reinforcement Learning, Life, Math] 
